@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Communication loss — Permanent — Rule-based reconfiguration — FaultBench-Industrial Research</title>
+<link rel="stylesheet" href="assets/wiki.css">
+<script src="assets/wiki.js"></script>
+</head>
+<body>
+<header class="site-header">
+  <button class="menu-button" type="button" aria-controls="sidebar" aria-expanded="true" onclick="toggleSidebar()" aria-label="Toggle navigation menu"><svg class="menu-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg></button>
+  <a class="wordmark" href="index.html">FaultBench-Industrial</a>
+  <span class="tagline">Research documentation</span>
+  <div class="header-tools">
+    <button class="theme-button" type="button" onclick="toggleTheme()" aria-label="Toggle theme">
+      <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+      <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+    </button>
+  </div>
+</header>
+
+<div class="site-shell">
+<aside id="sidebar" class="sidebar">
+  <div class="sidebar-section">
+    <div class="sidebar-title">Navigation</div>
+    <a href="index.html">Main page</a>
+    <a href="research-question.html">Research question</a>
+    <a href="methodology.html">Methodology</a>
+    <a href="metrics.html">Metrics</a>
+    <a href="results.html">Results</a>
+  </div>
+  <div class="sidebar-section">
+    <div class="sidebar-title">Fault injections</div>
+    <details >
+  <summary><a href="fault-sensor-noise.html" class="summary-link">Sensor noise</a></summary>
+  <details class="nested" >
+    <summary>Permanent</summary>
+    <div class="nav-children">
+      <a href="sensor-noise-permanent-rule-based-reconfiguration.html">Rule-based reconfiguration</a>
+      <a href="sensor-noise-permanent-fault-tolerant-trained-marl.html">Fault-tolerant-trained MARL</a>
+      <a href="sensor-noise-permanent-hierarchical-supervisor-agent.html">Hierarchical supervisor-agent</a>
+      <a href="sensor-noise-permanent-llm-agent-replanning.html">LLM-agent replanning</a>
+    </div>
+  </details>
+  <details class="nested" >
+    <summary>Transient</summary>
+    <div class="nav-children">
+      <a href="sensor-noise-transient-rule-based-reconfiguration.html">Rule-based reconfiguration</a>
+      <a href="sensor-noise-transient-fault-tolerant-trained-marl.html">Fault-tolerant-trained MARL</a>
+      <a href="sensor-noise-transient-hierarchical-supervisor-agent.html">Hierarchical supervisor-agent</a>
+      <a href="sensor-noise-transient-llm-agent-replanning.html">LLM-agent replanning</a>
+    </div>
+  </details>
+</details>
+<details >
+  <summary><a href="fault-actuator-degradation.html" class="summary-link">Actuator degradation</a></summary>
+  <details class="nested" >
+    <summary>Permanent</summary>
+    <div class="nav-children">
+      <a href="actuator-degradation-permanent-rule-based-reconfiguration.html">Rule-based reconfiguration</a>
+      <a href="actuator-degradation-permanent-fault-tolerant-trained-marl.html">Fault-tolerant-trained MARL</a>
+      <a href="actuator-degradation-permanent-hierarchical-supervisor-agent.html">Hierarchical supervisor-agent</a>
+      <a href="actuator-degradation-permanent-llm-agent-replanning.html">LLM-agent replanning</a>
+    </div>
+  </details>
+  <details class="nested" >
+    <summary>Transient</summary>
+    <div class="nav-children">
+      <a href="actuator-degradation-transient-rule-based-reconfiguration.html">Rule-based reconfiguration</a>
+      <a href="actuator-degradation-transient-fault-tolerant-trained-marl.html">Fault-tolerant-trained MARL</a>
+      <a href="actuator-degradation-transient-hierarchical-supervisor-agent.html">Hierarchical supervisor-agent</a>
+      <a href="actuator-degradation-transient-llm-agent-replanning.html">LLM-agent replanning</a>
+    </div>
+  </details>
+</details>
+<details >
+  <summary><a href="fault-agent-dropout.html" class="summary-link">Agent dropout</a></summary>
+  <details class="nested" >
+    <summary>Permanent</summary>
+    <div class="nav-children">
+      <a href="agent-dropout-permanent-rule-based-reconfiguration.html">Rule-based reconfiguration</a>
+      <a href="agent-dropout-permanent-fault-tolerant-trained-marl.html">Fault-tolerant-trained MARL</a>
+      <a href="agent-dropout-permanent-hierarchical-supervisor-agent.html">Hierarchical supervisor-agent</a>
+      <a href="agent-dropout-permanent-llm-agent-replanning.html">LLM-agent replanning</a>
+    </div>
+  </details>
+  <details class="nested" >
+    <summary>Transient</summary>
+    <div class="nav-children">
+      <a href="agent-dropout-transient-rule-based-reconfiguration.html">Rule-based reconfiguration</a>
+      <a href="agent-dropout-transient-fault-tolerant-trained-marl.html">Fault-tolerant-trained MARL</a>
+      <a href="agent-dropout-transient-hierarchical-supervisor-agent.html">Hierarchical supervisor-agent</a>
+      <a href="agent-dropout-transient-llm-agent-replanning.html">LLM-agent replanning</a>
+    </div>
+  </details>
+</details>
+<details open>
+  <summary><a href="fault-communication-loss.html" class="summary-link">Communication loss</a></summary>
+  <details class="nested" open>
+    <summary>Permanent</summary>
+    <div class="nav-children">
+      <a class="active" href="communication-loss-permanent-rule-based-reconfiguration.html">Rule-based reconfiguration</a>
+      <a href="communication-loss-permanent-fault-tolerant-trained-marl.html">Fault-tolerant-trained MARL</a>
+      <a href="communication-loss-permanent-hierarchical-supervisor-agent.html">Hierarchical supervisor-agent</a>
+      <a href="communication-loss-permanent-llm-agent-replanning.html">LLM-agent replanning</a>
+    </div>
+  </details>
+  <details class="nested" >
+    <summary>Transient</summary>
+    <div class="nav-children">
+      <a href="communication-loss-transient-rule-based-reconfiguration.html">Rule-based reconfiguration</a>
+      <a href="communication-loss-transient-fault-tolerant-trained-marl.html">Fault-tolerant-trained MARL</a>
+      <a href="communication-loss-transient-hierarchical-supervisor-agent.html">Hierarchical supervisor-agent</a>
+      <a href="communication-loss-transient-llm-agent-replanning.html">LLM-agent replanning</a>
+    </div>
+  </details>
+</details>
+<details >
+  <summary><a href="fault-byzantine-adversarial.html" class="summary-link">Byzantine / adversarial agents</a></summary>
+  <details class="nested" >
+    <summary>Permanent</summary>
+    <div class="nav-children">
+      <a href="byzantine-adversarial-permanent-rule-based-reconfiguration.html">Rule-based reconfiguration</a>
+      <a href="byzantine-adversarial-permanent-fault-tolerant-trained-marl.html">Fault-tolerant-trained MARL</a>
+      <a href="byzantine-adversarial-permanent-hierarchical-supervisor-agent.html">Hierarchical supervisor-agent</a>
+      <a href="byzantine-adversarial-permanent-llm-agent-replanning.html">LLM-agent replanning</a>
+    </div>
+  </details>
+  <details class="nested" >
+    <summary>Transient</summary>
+    <div class="nav-children">
+      <a href="byzantine-adversarial-transient-rule-based-reconfiguration.html">Rule-based reconfiguration</a>
+      <a href="byzantine-adversarial-transient-fault-tolerant-trained-marl.html">Fault-tolerant-trained MARL</a>
+      <a href="byzantine-adversarial-transient-hierarchical-supervisor-agent.html">Hierarchical supervisor-agent</a>
+      <a href="byzantine-adversarial-transient-llm-agent-replanning.html">LLM-agent replanning</a>
+    </div>
+  </details>
+</details>
+  </div>
+  <div class="sidebar-section">
+    <div class="sidebar-title">Research</div>
+    <a href="environment.html">Base environment</a>
+    <a href="experiment-design.html">Experiment design</a>
+    <a href="recovery-mechanisms.html">Recovery mechanisms</a>
+  </div>
+</aside>
+
+<main class="content">
+  <div class="page-tools">
+    <span>Research documentation</span>
+    <span>·</span>
+    <span>Experimental record</span>
+  </div>
+  <div class="article-kicker">Communication loss / Permanent</div><h1>Rule-based reconfiguration</h1><p class="lede">Permanent communication loss evaluation</p><div class="notice"><b>Fault:</b> Communication loss<br>
+<b>Duration:</b> Permanent<br>
+<b>Recovery mechanism:</b> Rule-based reconfiguration</div>
+<h2>Experiment definition</h2>
+<p>The experiment evaluates <b>Rule-based reconfiguration</b> under a <b>permanent</b> communication loss injection. Fault onset is randomized around environment steps 40–60 according to the implementation plan.</p>
+<h2>Expected evaluation record</h2>
+<table><tr><th>Metric</th><th>Recorded value</th></tr>
+<tr><td>Time-to-recovery</td><td>—</td></tr>
+<tr><td>Degradation-area</td><td>—</td></tr>
+<tr><td>False-recovery rate</td><td>—</td></tr>
+<tr><td>Safety-violation count</td><td>—</td></tr></table>
+<h2>Graph</h2>
+<figure class="graph-placeholder">
+  <div class="graph-axis">
+    <div class="graph-empty">Graph placeholder</div>
+    <span class="axis-y">Performance</span>
+    <span class="axis-x">Environment steps</span>
+  </div>
+  <figcaption>Communication loss — Permanent — Rule-based reconfiguration. Replace this placeholder with the corresponding experimental figure.</figcaption>
+</figure>
+<h2>Notes</h2>
+<p>This page is intentionally separated from the paper-facing results so that full-resolution plots, additional seeds, and diagnostic figures can be documented without overloading the publication.</p>
+  <footer class="footer">
+    <p>This site documents the experimental work associated with the FaultBench-Industrial research project.</p>
+    <p>Last updated: August 2026</p>
+  </footer>
+</main>
+</div>
+</body>
+</html>
