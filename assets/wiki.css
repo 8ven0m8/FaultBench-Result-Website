@@ -247,8 +247,37 @@ figcaption { padding: 10px 13px; color: var(--muted); font-size: 12px; }
   font-size: 12px;
 }
 @media (max-width: 800px) {
-  .sidebar { width: 235px; flex-basis: 235px; }
-  .content { padding: 14px 18px 40px; }
+  html, body {
+    overflow-x: hidden;
+  }
+  .site-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    z-index: 100;
+  }
+  .site-shell {
+    margin-top: 57px;
+    overflow-x: hidden;
+  }
+  .sidebar {
+    position: fixed;
+    top: 57px;
+    left: 0;
+    height: calc(100vh - 57px);
+    width: 275px;
+    max-width: 80vw;
+    flex: none;
+    z-index: 90;
+    box-shadow: 2px 0 8px rgba(0, 0, 0, 0.15);
+  }
+  .content {
+    width: 100%;
+    max-width: 100%;
+    padding: 14px 18px 40px;
+  }
   .tagline { display: none; }
   h1 { font-size: 28px; }
 }
