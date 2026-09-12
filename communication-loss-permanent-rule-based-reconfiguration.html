@@ -152,7 +152,7 @@
     <span>·</span>
     <span>Experimental record</span>
   </div>
-  <div class="article-kicker">Communication loss / Permanent</div><h1>Rule-based reconfiguration</h1><p class="lede">Permanent communication loss evaluation</p><div class="notice"><b>Fault:</b> Communication loss<br>
+<div class="article-kicker">Communication loss / Permanent</div><h1>Rule-based reconfiguration</h1><p class="lede">Permanent communication loss evaluation</p><div class="notice"><b>Fault:</b> Communication loss<br>
 <b>Duration:</b> Permanent<br>
 <b>Recovery mechanism:</b> Rule-based reconfiguration</div>
 <h2>Experiment definition</h2>
@@ -163,15 +163,34 @@
 <tr><td>Degradation-area</td><td>—</td></tr>
 <tr><td>False-recovery rate</td><td>—</td></tr>
 <tr><td>Safety-violation count</td><td>—</td></tr></table>
-<h2>Graph</h2>
-<figure class="graph-placeholder">
-  <div class="graph-axis">
-    <div class="graph-empty">Graph placeholder</div>
-    <span class="axis-y">Performance</span>
-    <span class="axis-x">Environment steps</span>
-  </div>
-  <figcaption>Communication loss — Permanent — Rule-based reconfiguration. Replace this placeholder with the corresponding experimental figure.</figcaption>
+<h2>Experimental trajectory graphs</h2>
+<p>One representative seed (seed 0 of 8) per target × mode combination from the full sweep. See the <a href="results.html">Results</a> page for the multi-seed aggregate comparison across mechanisms.</p>
+<h3>Rule-based reconfiguration</h3>
+<h4>Pressing Agent Target (blackout mode)</h4>
+<figure class="graph-container">
+  <img src="assets/communication-loss-permanent-rule-based-blackout-press.svg" alt="Communication loss permanent fault, Rule-based reconfiguration, Pressing Agent Target (blackout mode)" class="graph-image">
+  <figcaption>Rule-based reconfiguration — Pressing Agent Target (blackout mode) — evaluation trajectory under permanent communication loss (fault onset randomized between steps 40-60), seed 0 of the 8-seed sweep.</figcaption>
 </figure>
+
+<h4>Pressing Agent Target (stale mode)</h4>
+<figure class="graph-container">
+  <img src="assets/communication-loss-permanent-rule-based-stale-press.svg" alt="Communication loss permanent fault, Rule-based reconfiguration, Pressing Agent Target (stale mode)" class="graph-image">
+  <figcaption>Rule-based reconfiguration — Pressing Agent Target (stale mode) — evaluation trajectory under permanent communication loss (fault onset randomized between steps 40-60), seed 0 of the 8-seed sweep.</figcaption>
+</figure>
+
+<h3>Rule-based detect</h3>
+<h4>Pressing Agent Target (blackout mode)</h4>
+<figure class="graph-container">
+  <img src="assets/communication-loss-permanent-rule-based-detect-blackout-press.svg" alt="Communication loss permanent fault, Rule-based detect, Pressing Agent Target (blackout mode)" class="graph-image">
+  <figcaption>Rule-based detect — Pressing Agent Target (blackout mode) — evaluation trajectory under permanent communication loss (fault onset randomized between steps 40-60), seed 0 of the 8-seed sweep.</figcaption>
+</figure>
+
+<h4>Pressing Agent Target (stale mode)</h4>
+<figure class="graph-container">
+  <img src="assets/communication-loss-permanent-rule-based-detect-stale-press.svg" alt="Communication loss permanent fault, Rule-based detect, Pressing Agent Target (stale mode)" class="graph-image">
+  <figcaption>Rule-based detect — Pressing Agent Target (stale mode) — evaluation trajectory under permanent communication loss (fault onset randomized between steps 40-60), seed 0 of the 8-seed sweep.</figcaption>
+</figure>
+
 <h2>Notes</h2>
 <p>This page is intentionally separated from the paper-facing results so that full-resolution plots, additional seeds, and diagnostic figures can be documented without overloading the publication.</p>
   <footer class="footer">

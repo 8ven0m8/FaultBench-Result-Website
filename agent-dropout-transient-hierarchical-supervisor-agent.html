@@ -152,7 +152,7 @@
     <span>·</span>
     <span>Experimental record</span>
   </div>
-  <div class="article-kicker">Agent dropout / Transient</div><h1>Hierarchical supervisor-agent</h1><p class="lede">Transient agent dropout evaluation</p><div class="notice"><b>Fault:</b> Agent dropout<br>
+<div class="article-kicker">Agent dropout / Transient</div><h1>Hierarchical supervisor-agent</h1><p class="lede">Transient agent dropout evaluation</p><div class="notice"><b>Fault:</b> Agent dropout<br>
 <b>Duration:</b> Transient<br>
 <b>Recovery mechanism:</b> Hierarchical supervisor-agent</div>
 <h2>Experiment definition</h2>
@@ -163,15 +163,26 @@
 <tr><td>Degradation-area</td><td>—</td></tr>
 <tr><td>False-recovery rate</td><td>—</td></tr>
 <tr><td>Safety-violation count</td><td>—</td></tr></table>
-<h2>Graph</h2>
-<figure class="graph-placeholder">
-  <div class="graph-axis">
-    <div class="graph-empty">Graph placeholder</div>
-    <span class="axis-y">Performance</span>
-    <span class="axis-x">Environment steps</span>
-  </div>
-  <figcaption>Agent dropout — Transient — Hierarchical supervisor-agent. Replace this placeholder with the corresponding experimental figure.</figcaption>
+<h2>Experimental trajectory graphs</h2>
+<p>One representative seed (seed 0 of 8) per target combination from the full sweep. See the <a href="results.html">Results</a> page for the multi-seed aggregate comparison across mechanisms.</p>
+<h4>Sorting Agent Target</h4>
+<figure class="graph-container">
+  <img src="assets/agent-dropout-transient-supervisor-sort.svg" alt="Agent dropout transient fault, Hierarchical supervisor-agent, Sorting Agent Target" class="graph-image">
+  <figcaption>Hierarchical supervisor-agent — Sorting Agent Target — evaluation trajectory under transient agent dropout (fault onset randomized between steps 40-60), seed 0 of the 8-seed sweep.</figcaption>
 </figure>
+
+<h4>Pressing Agent Target</h4>
+<figure class="graph-container">
+  <img src="assets/agent-dropout-transient-supervisor-press.svg" alt="Agent dropout transient fault, Hierarchical supervisor-agent, Pressing Agent Target" class="graph-image">
+  <figcaption>Hierarchical supervisor-agent — Pressing Agent Target — evaluation trajectory under transient agent dropout (fault onset randomized between steps 40-60), seed 0 of the 8-seed sweep.</figcaption>
+</figure>
+
+<h4>Both Agents Target</h4>
+<figure class="graph-container">
+  <img src="assets/agent-dropout-transient-supervisor-both.svg" alt="Agent dropout transient fault, Hierarchical supervisor-agent, Both Agents Target" class="graph-image">
+  <figcaption>Hierarchical supervisor-agent — Both Agents Target — evaluation trajectory under transient agent dropout (fault onset randomized between steps 40-60), seed 0 of the 8-seed sweep.</figcaption>
+</figure>
+
 <h2>Notes</h2>
 <p>This page is intentionally separated from the paper-facing results so that full-resolution plots, additional seeds, and diagnostic figures can be documented without overloading the publication.</p>
   <footer class="footer">

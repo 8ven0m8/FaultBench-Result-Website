@@ -1,0 +1,374 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Results — FaultBench-Industrial Research</title>
+<link rel="stylesheet" href="assets/wiki.css">
+<script src="assets/wiki.js"></script>
+</head>
+<body>
+<header class="site-header">
+  <button class="menu-button" type="button" aria-controls="sidebar" aria-expanded="true" onclick="toggleSidebar()" aria-label="Toggle navigation menu"><svg class="menu-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg></button>
+  <a class="wordmark" href="index.html">FaultBench-Industrial</a>
+  <span class="tagline">Research documentation</span>
+  <div class="header-tools">
+    <button class="theme-button" type="button" onclick="toggleTheme()" aria-label="Toggle theme">
+      <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+      <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+    </button>
+  </div>
+</header>
+
+<div class="site-shell">
+<aside id="sidebar" class="sidebar">
+  <div class="sidebar-section">
+    <div class="sidebar-title">Navigation</div>
+    <a href="index.html">Main page</a>
+    <a href="research-question.html">Research question</a>
+    <a href="methodology.html">Methodology</a>
+    <a href="metrics.html">Metrics</a>
+    <a href="results.html">Results</a>
+  </div>
+  <div class="sidebar-section">
+    <div class="sidebar-title">Fault injections</div>
+    <details >
+  <summary><a href="fault-sensor-noise.html" class="summary-link">Sensor noise</a></summary>
+  <details class="nested" >
+    <summary>Permanent</summary>
+    <div class="nav-children">
+      <a href="sensor-noise-permanent-rule-based-reconfiguration.html">Rule-based reconfiguration</a>
+      <a href="sensor-noise-permanent-fault-tolerant-trained-marl.html">Fault-tolerant-trained MARL</a>
+      <a href="sensor-noise-permanent-hierarchical-supervisor-agent.html">Hierarchical supervisor-agent</a>
+      <a href="sensor-noise-permanent-llm-agent-replanning.html">LLM-agent replanning</a>
+    </div>
+  </details>
+  <details class="nested" >
+    <summary>Transient</summary>
+    <div class="nav-children">
+      <a href="sensor-noise-transient-rule-based-reconfiguration.html">Rule-based reconfiguration</a>
+      <a href="sensor-noise-transient-fault-tolerant-trained-marl.html">Fault-tolerant-trained MARL</a>
+      <a href="sensor-noise-transient-hierarchical-supervisor-agent.html">Hierarchical supervisor-agent</a>
+      <a href="sensor-noise-transient-llm-agent-replanning.html">LLM-agent replanning</a>
+    </div>
+  </details>
+</details>
+<details >
+  <summary><a href="fault-actuator-degradation.html" class="summary-link">Actuator degradation</a></summary>
+  <details class="nested" >
+    <summary>Permanent</summary>
+    <div class="nav-children">
+      <a href="actuator-degradation-permanent-rule-based-reconfiguration.html">Rule-based reconfiguration</a>
+      <a href="actuator-degradation-permanent-fault-tolerant-trained-marl.html">Fault-tolerant-trained MARL</a>
+      <a href="actuator-degradation-permanent-hierarchical-supervisor-agent.html">Hierarchical supervisor-agent</a>
+      <a href="actuator-degradation-permanent-llm-agent-replanning.html">LLM-agent replanning</a>
+    </div>
+  </details>
+  <details class="nested" >
+    <summary>Transient</summary>
+    <div class="nav-children">
+      <a href="actuator-degradation-transient-rule-based-reconfiguration.html">Rule-based reconfiguration</a>
+      <a href="actuator-degradation-transient-fault-tolerant-trained-marl.html">Fault-tolerant-trained MARL</a>
+      <a href="actuator-degradation-transient-hierarchical-supervisor-agent.html">Hierarchical supervisor-agent</a>
+      <a href="actuator-degradation-transient-llm-agent-replanning.html">LLM-agent replanning</a>
+    </div>
+  </details>
+</details>
+<details >
+  <summary><a href="fault-agent-dropout.html" class="summary-link">Agent dropout</a></summary>
+  <details class="nested" >
+    <summary>Permanent</summary>
+    <div class="nav-children">
+      <a href="agent-dropout-permanent-rule-based-reconfiguration.html">Rule-based reconfiguration</a>
+      <a href="agent-dropout-permanent-fault-tolerant-trained-marl.html">Fault-tolerant-trained MARL</a>
+      <a href="agent-dropout-permanent-hierarchical-supervisor-agent.html">Hierarchical supervisor-agent</a>
+      <a href="agent-dropout-permanent-llm-agent-replanning.html">LLM-agent replanning</a>
+    </div>
+  </details>
+  <details class="nested" >
+    <summary>Transient</summary>
+    <div class="nav-children">
+      <a href="agent-dropout-transient-rule-based-reconfiguration.html">Rule-based reconfiguration</a>
+      <a href="agent-dropout-transient-fault-tolerant-trained-marl.html">Fault-tolerant-trained MARL</a>
+      <a href="agent-dropout-transient-hierarchical-supervisor-agent.html">Hierarchical supervisor-agent</a>
+      <a href="agent-dropout-transient-llm-agent-replanning.html">LLM-agent replanning</a>
+    </div>
+  </details>
+</details>
+<details >
+  <summary><a href="fault-communication-loss.html" class="summary-link">Communication loss</a></summary>
+  <details class="nested" >
+    <summary>Permanent</summary>
+    <div class="nav-children">
+      <a href="communication-loss-permanent-rule-based-reconfiguration.html">Rule-based reconfiguration</a>
+      <a href="communication-loss-permanent-fault-tolerant-trained-marl.html">Fault-tolerant-trained MARL</a>
+      <a href="communication-loss-permanent-hierarchical-supervisor-agent.html">Hierarchical supervisor-agent</a>
+      <a href="communication-loss-permanent-llm-agent-replanning.html">LLM-agent replanning</a>
+    </div>
+  </details>
+  <details class="nested" >
+    <summary>Transient</summary>
+    <div class="nav-children">
+      <a href="communication-loss-transient-rule-based-reconfiguration.html">Rule-based reconfiguration</a>
+      <a href="communication-loss-transient-fault-tolerant-trained-marl.html">Fault-tolerant-trained MARL</a>
+      <a href="communication-loss-transient-hierarchical-supervisor-agent.html">Hierarchical supervisor-agent</a>
+      <a href="communication-loss-transient-llm-agent-replanning.html">LLM-agent replanning</a>
+    </div>
+  </details>
+</details>
+<details >
+  <summary><a href="fault-byzantine-adversarial.html" class="summary-link">Byzantine / adversarial agents</a></summary>
+  <details class="nested" >
+    <summary>Permanent</summary>
+    <div class="nav-children">
+      <a href="byzantine-adversarial-permanent-rule-based-reconfiguration.html">Rule-based reconfiguration</a>
+      <a href="byzantine-adversarial-permanent-fault-tolerant-trained-marl.html">Fault-tolerant-trained MARL</a>
+      <a href="byzantine-adversarial-permanent-hierarchical-supervisor-agent.html">Hierarchical supervisor-agent</a>
+      <a href="byzantine-adversarial-permanent-llm-agent-replanning.html">LLM-agent replanning</a>
+    </div>
+  </details>
+  <details class="nested" >
+    <summary>Transient</summary>
+    <div class="nav-children">
+      <a href="byzantine-adversarial-transient-rule-based-reconfiguration.html">Rule-based reconfiguration</a>
+      <a href="byzantine-adversarial-transient-fault-tolerant-trained-marl.html">Fault-tolerant-trained MARL</a>
+      <a href="byzantine-adversarial-transient-hierarchical-supervisor-agent.html">Hierarchical supervisor-agent</a>
+      <a href="byzantine-adversarial-transient-llm-agent-replanning.html">LLM-agent replanning</a>
+    </div>
+  </details>
+</details>
+  </div>
+  <div class="sidebar-section">
+    <div class="sidebar-title">Research</div>
+    <a href="environment.html">Base environment</a>
+    <a href="experiment-design.html">Experiment design</a>
+    <a href="recovery-mechanisms.html">Recovery mechanisms</a>
+  </div>
+</aside>
+
+<main class="content">
+  <div class="page-tools">
+    <span>Research documentation</span>
+    <span>·</span>
+    <span>Experimental record</span>
+  </div>
+  <div class="article-kicker">Results</div><h1>Aggregate benchmark comparison</h1><p class="lede">Multi-seed, cross-mechanism comparison across all five fault classes, replacing single-run inspection with averaged, confidence-bounded metrics.</p>
+
+<div class="toc"><div class="toc-title">Contents</div><ol>
+<li><a href="#overview">Overview</a></li>
+<li><a href="#why-multi-seed">Why multi-seed</a></li>
+<li><a href="#reading">How to read these charts</a></li>
+<li><a href="#glossary">Metric glossary</a></li>
+<li><a href="#sensor-noise">Sensor noise</a></li>
+<li><a href="#actuator-degradation">Actuator degradation</a></li>
+<li><a href="#agent-dropout">Agent dropout</a></li>
+<li><a href="#communication-loss">Communication loss</a></li>
+<li><a href="#byzantine">Byzantine / adversarial agents</a></li>
+<li><a href="#conclusions">Cross-fault conclusions</a></li>
+</ol></div>
+
+<h2 id="overview">Overview</h2>
+<p>The individual-run pages linked from the sidebar each show one trajectory graph for one seed. This page instead aggregates <strong>8 independent seed realizations per (fault × target × duration × recovery mechanism) combination</strong> — 2,504 individual evaluation runs in total — into means with 95% confidence intervals, and further breaks each result down by fault target (sort agent, press agent, or both) and fault duration (transient or permanent). Six recovery arms are compared throughout: <code>none</code> (no recovery, the control condition), <code>rule_based</code> (oracle reconfiguration, told the ground-truth fault state), <code>rule_based_detect</code> (the same corrective heuristic, but required to detect the fault itself from observable signals), <code>supervisor</code> (a trained hierarchical supervisor policy), <code>fault_tolerant_marl</code> (agents trained under domain-randomized faults), and <code>llm_replanning</code> (an LLM agent that reasons over system state and issues a recovery plan).</p>
+<p>Note on <code>rule_based</code> vs. the "Rule-based reconfiguration" pages elsewhere on this site: the individual trajectory pages under each fault type currently show the oracle variant only. <code>rule_based_detect</code> is the same corrective action set (reconfigure the affected channel using a fixed heuristic) gated behind self-detection instead of ground truth, and is included here as a distinct arm because detection quality turns out to matter a great deal — see the metric glossary and per-fault sections below.</p>
+
+<h2 id="why-multi-seed">Why multi-seed</h2>
+<p>A single evaluation run answers "what happened in this one random draw," not "how does this mechanism perform in general." Two failure modes make a single run actively misleading here: a fault instance can be too mild to produce any measurable effect (a <em>null result</em> — the run looks identical to a fault-free control episode within normal noise), and a full-override oracle mechanism can produce byte-identical outcomes across unrelated fault types purely because it discards the fault's effect entirely once it engages. Averaging 8 independently-seeded realizations per combination — each with its own episode dynamics and its own fault-injection timing — turns these single-draw artifacts into an honest signal, the same reason a hardware benchmark reports an average over many passes rather than one frame's timing.</p>
+<div class="notice">An earlier version of this evaluation collapsed four weighted penalty terms into a single 0–100 <code>benchmark_score</code>. It was dropped: the weights (safety 0.40 / deficit 0.25 / relapse 0.20 / time-to-recovery 0.15) were a fixed, non-empirical choice, the composite saturated at 100 on a large share of runs (destroying discriminative power exactly where it mattered), and blending safety and speed into one number hid the speed-vs-safety trade-off the research question is actually about. The metrics below are reported as separate, directly interpretable quantities instead.</div>
+
+<h2 id="reading">How to read these charts</h2>
+<p>Every chart is a grid of bar plots: rows are the fault's <strong>target</strong> (sort agent / press agent / both), columns are <strong>duration</strong> (transient / permanent). Bars within a cell are the six recovery arms, in the same left-to-right order every time (<code>none</code>, <code>rule_based</code>, <code>rule_based_detect</code>, <code>supervisor</code>, <code>fault_tolerant_marl</code>, <code>llm_replanning</code>), and the black whisker on each bar is a 95% confidence interval computed across the 8 seed realizations. A missing bar means no data for that arm in that cell (for example, <code>none</code> and <code>fault_tolerant_marl</code> have no fault detector, so they never appear on the detection-quality charts).</p>
+<div class="notice"><strong>Direction is not the same for every metric.</strong> Four of the six metrics are "amount of damage" quantities where a <em>shorter</em> bar is the good outcome. Two — fraction of time spent healthy, and detection recall — are the opposite: a <em>taller</em> bar is good. Every chart states its direction explicitly in its title. Each subplot also has its own y-axis, auto-scaled to that panel's data, so bar heights are only comparable within a panel — always check the axis numbers before comparing across rows or columns.</div>
+
+<h2 id="glossary">Metric glossary</h2>
+<table><tr><th>Metric</th><th>Direction</th><th>Definition</th></tr>
+<tr><td>Corrected degradation-area</td><td>Lower is better</td><td>Total performance loss during the fault-active window, with the natural non-stationary-reward pattern of a matched no-fault control episode subtracted out. A run whose apparent loss is no larger than the control's own noise floor is flagged as a likely null result rather than credited as a strong recovery.</td></tr>
+<tr><td>Weighted safety-violation excess</td><td>Lower is better</td><td>5×catastrophic + 2×severe + 1×near-miss container-safety events during the fault window, minus the same weighted count from the matched no-fault control episode, floored at zero. Isolates safety violations actually attributable to the fault (or to a mechanism's own intervention), rather than the routine near-capacity operation every run exhibits by design.</td></tr>
+<tr><td>Fraction of window spent healthy</td><td>Higher is better</td><td>Proportion of the fault-active window in which performance was at or above a recovered threshold. Computed for every event, including null results (correctly close to 1.0 for those), so — unlike time-to-recovery — it does not depend on conditioning on "recovered and not null," and carries no sample-composition bias between mechanisms.</td></tr>
+<tr><td>Relapse count</td><td>Lower is better</td><td>Number of times an event's performance dropped back out of the healthy band after first recovering. Flags mechanisms that look acceptable on average but are unstable — recovering, relapsing, and recovering again.</td></tr>
+<tr><td>False-recovery rate</td><td>Lower is better</td><td>Fraction of steps a self-detecting mechanism flagged a fault when none was genuinely active (the false-positive side of detection quality). <code>rule_based</code> is an oracle rather than a detector and is included here at its true value of 0.0, not blank; <code>none</code> and <code>fault_tolerant_marl</code> run no detector at all and have no value.</td></tr>
+<tr><td>Intervention recall</td><td>Higher is better</td><td>Of the steps where the fault was genuinely active, the fraction a self-detecting mechanism actually flagged (the false-negative side of detection quality, complementing false-recovery rate). <code>rule_based</code> is trivially 1.0 by construction.</td></tr>
+</table>
+<p>A time-to-recovery metric was evaluated and dropped from this comparison. It is only meaningful over events that both recovered and were not a null result, and that qualifying subset differs enormously in size and composition between mechanisms — a mechanism that fully neutralizes a fault has that event excluded as a null result altogether, leaving only its hardest, unresolved cases to average over, while a mechanism that never touches the fault keeps a larger, easier-composed pool. This produced misleading "faster recovery" numbers for mechanisms doing objectively less. Fraction-of-window-healthy above is reported instead, since it is computed identically for every event regardless of outcome.</p>
+
+<h2 id="sensor-noise">Sensor noise</h2>
+<p>Additive noise on observation vectors — the mildest fault class in the suite. Null-result rates run 31–44% across arms, meaning a large share of individual instances at the default noise level (σ=0.1) are not reliably distinguishable from ordinary episode noise. Read the confidence intervals carefully here in particular.</p>
+
+<h3>Corrected degradation-area (lower is better)</h3>
+<figure class="graph-container">
+  <img src="assets/results-sensor-noise-degradation-area.png" alt="Corrected degradation-area by target and duration, sensor noise, all six recovery mechanisms" class="graph-image">
+  <figcaption>Pooled means: none 19.6, rule_based 11.8, rule_based_detect 15.3, supervisor 22.6, fault_tolerant_marl 17.7, llm_replanning 16.4. The target breakdown matters far more than the pooled number: supervisor averages ~0.5 on target=sort but ~50 on target=press/both — a roughly 50-100x swing invisible in the pooled figure.</figcaption>
+</figure>
+<h3>Weighted safety-violation excess (lower is better)</h3>
+<figure class="graph-container">
+  <img src="assets/results-sensor-noise-safety-excess.png" alt="Weighted safety-violation excess by target and duration, sensor noise, all six recovery mechanisms" class="graph-image">
+  <figcaption>supervisor has the highest pooled safety-excess (122.0) of any arm for this fault type, driven almost entirely by the target=press/both cells — consistent with the degradation-area swing above.</figcaption>
+</figure>
+<h3>Fraction of window spent healthy (higher is better)</h3>
+<figure class="graph-container">
+  <img src="assets/results-sensor-noise-fraction-time-healthy.png" alt="Fraction of window spent healthy by target and duration, sensor noise, all six recovery mechanisms" class="graph-image">
+</figure>
+<h3>Relapse count (lower is better)</h3>
+<figure class="graph-container">
+  <img src="assets/results-sensor-noise-relapse-count.png" alt="Relapse count by target and duration, sensor noise, all six recovery mechanisms" class="graph-image">
+</figure>
+<h3>False-recovery rate (lower is better)</h3>
+<figure class="graph-container">
+  <img src="assets/results-sensor-noise-false-recovery-rate.png" alt="False-recovery rate by target and duration, sensor noise, detector-based mechanisms" class="graph-image">
+  <figcaption>rule_based_detect and llm_replanning sit close together (~0.44-0.47 pooled) since llm_replanning reuses rule_based_detect's detector unmodified. supervisor is highest (~0.58).</figcaption>
+</figure>
+<h3>Intervention recall (higher is better)</h3>
+<figure class="graph-container">
+  <img src="assets/results-sensor-noise-intervention-recall.png" alt="Intervention recall by target and duration, sensor noise, detector-based mechanisms" class="graph-image">
+  <figcaption>supervisor's recall (0.75-0.83 across cells) is well above rule_based_detect's and llm_replanning's (0.14-0.5, and strongly target-dependent) — see cross-fault conclusions for the precision/recall reading of this.</figcaption>
+</figure>
+<p><strong>Findings.</strong> For a fault this mild, target matters more than recovery mechanism: every arm looks close to perfect on target=sort, and the real separation only appears on target=press/both, where supervisor is the weakest performer on both degradation-area and safety-excess despite having the best recall of the three detectors. rule_based_detect and llm_replanning trade a lower false-positive rate for lower recall than supervisor.</p>
+
+<h2 id="actuator-degradation">Actuator degradation</h2>
+<p>Motor/actuator attenuation in one of three modes (stuck, restrict, slip), pooled across modes in the charts below. Null-result rates are lower here (12-33%) than sensor noise — a more consistently measurable fault.</p>
+
+<h3>Corrected degradation-area (lower is better)</h3>
+<figure class="graph-container">
+  <img src="assets/results-actuator-degradation-degradation-area.png" alt="Corrected degradation-area by target and duration, actuator degradation, all six recovery mechanisms" class="graph-image">
+  <figcaption>Pooled means: none 45.4, fault_tolerant_marl 46.4 (statistically indistinguishable from none), rule_based 11.8, rule_based_detect 15.7, supervisor 17.3, llm_replanning 25.3.</figcaption>
+</figure>
+<h3>Weighted safety-violation excess (lower is better)</h3>
+<figure class="graph-container">
+  <img src="assets/results-actuator-degradation-safety-excess.png" alt="Weighted safety-violation excess by target and duration, actuator degradation, all six recovery mechanisms" class="graph-image">
+  <figcaption>none averages 651.4 and fault_tolerant_marl 526.9 — both roughly an order of magnitude above rule_based's 61.1. This is the largest safety gap in the suite after agent dropout and Byzantine.</figcaption>
+</figure>
+<h3>Fraction of window spent healthy (higher is better)</h3>
+<figure class="graph-container">
+  <img src="assets/results-actuator-degradation-fraction-time-healthy.png" alt="Fraction of window spent healthy by target and duration, actuator degradation, all six recovery mechanisms" class="graph-image">
+</figure>
+<h3>Relapse count (lower is better)</h3>
+<figure class="graph-container">
+  <img src="assets/results-actuator-degradation-relapse-count.png" alt="Relapse count by target and duration, actuator degradation, all six recovery mechanisms" class="graph-image">
+</figure>
+<h3>False-recovery rate (lower is better)</h3>
+<figure class="graph-container">
+  <img src="assets/results-actuator-degradation-false-recovery-rate.png" alt="False-recovery rate by target and duration, actuator degradation, detector-based mechanisms" class="graph-image">
+</figure>
+<h3>Intervention recall (higher is better)</h3>
+<figure class="graph-container">
+  <img src="assets/results-actuator-degradation-intervention-recall.png" alt="Intervention recall by target and duration, actuator degradation, detector-based mechanisms" class="graph-image">
+</figure>
+<p><strong>Findings.</strong> Every self-detecting or oracle mechanism beats both none and fault_tolerant_marl by a wide margin on safety; fault_tolerant_marl tracks none almost exactly on both headline metrics, meaning the fault-tolerant training did not measurably help against this fault class in aggregate (see cross-fault conclusions for why).</p>
+
+<h2 id="agent-dropout">Agent dropout</h2>
+<p>An agent's participation is completely zeroed out — one of the two most severe fault classes tested, alongside Byzantine.</p>
+
+<h3>Corrected degradation-area (lower is better)</h3>
+<figure class="graph-container">
+  <img src="assets/results-agent-dropout-degradation-area.png" alt="Corrected degradation-area by target and duration, agent dropout, all six recovery mechanisms" class="graph-image">
+  <figcaption>Pooled means: none 63.9, fault_tolerant_marl 64.1, rule_based 11.8, rule_based_detect 18.1, supervisor 21.9, llm_replanning 31.8.</figcaption>
+</figure>
+<h3>Weighted safety-violation excess (lower is better)</h3>
+<figure class="graph-container">
+  <img src="assets/results-agent-dropout-safety-excess.png" alt="Weighted safety-violation excess by target and duration, agent dropout, all six recovery mechanisms" class="graph-image">
+  <figcaption>The largest safety gap measured in the whole suite: none and fault_tolerant_marl both average ~1052, against rule_based's 61.1 — roughly 17x. An unresponsive agent left uncorrected accumulates safety violations for the entire remainder of a permanent fault window.</figcaption>
+</figure>
+<h3>Fraction of window spent healthy (higher is better)</h3>
+<figure class="graph-container">
+  <img src="assets/results-agent-dropout-fraction-time-healthy.png" alt="Fraction of window spent healthy by target and duration, agent dropout, all six recovery mechanisms" class="graph-image">
+</figure>
+<h3>Relapse count (lower is better)</h3>
+<figure class="graph-container">
+  <img src="assets/results-agent-dropout-relapse-count.png" alt="Relapse count by target and duration, agent dropout, all six recovery mechanisms" class="graph-image">
+</figure>
+<h3>False-recovery rate (lower is better)</h3>
+<figure class="graph-container">
+  <img src="assets/results-agent-dropout-false-recovery-rate.png" alt="False-recovery rate by target and duration, agent dropout, detector-based mechanisms" class="graph-image">
+</figure>
+<h3>Intervention recall (higher is better)</h3>
+<figure class="graph-container">
+  <img src="assets/results-agent-dropout-intervention-recall.png" alt="Intervention recall by target and duration, agent dropout, detector-based mechanisms" class="graph-image">
+</figure>
+<p><strong>Findings.</strong> This is the strongest evidence in the suite for active correction: none and fault_tolerant_marl are statistically indistinguishable from each other and both roughly 17x worse than rule_based on safety-violation excess. Every real corrective mechanism, however crude, is worth deploying against a fully-dropped agent.</p>
+
+<h2 id="communication-loss">Communication loss</h2>
+<p>Inter-agent messaging is dropped or staled; only the press channel is affected by construction, so every chart below has a single target row. The one fault class where fault_tolerant_marl outright wins rather than tying none.</p>
+
+<h3>Corrected degradation-area (lower is better)</h3>
+<figure class="graph-container">
+  <img src="assets/results-communication-loss-degradation-area.png" alt="Corrected degradation-area by duration, communication loss, all six recovery mechanisms" class="graph-image">
+  <figcaption>Pooled means: none 21.9, rule_based 17.7, rule_based_detect 9.2, supervisor 23.5 (worse than none), fault_tolerant_marl 6.3 (best of any arm in this fault class), llm_replanning 22.1.</figcaption>
+</figure>
+<h3>Weighted safety-violation excess (lower is better)</h3>
+<figure class="graph-container">
+  <img src="assets/results-communication-loss-safety-excess.png" alt="Weighted safety-violation excess by duration, communication loss, all six recovery mechanisms" class="graph-image">
+  <figcaption>fault_tolerant_marl again lowest (15.8); supervisor again highest (109.9), just above none (106.9).</figcaption>
+</figure>
+<h3>Fraction of window spent healthy (higher is better)</h3>
+<figure class="graph-container">
+  <img src="assets/results-communication-loss-fraction-time-healthy.png" alt="Fraction of window spent healthy by duration, communication loss, all six recovery mechanisms" class="graph-image">
+</figure>
+<h3>Relapse count (lower is better)</h3>
+<figure class="graph-container">
+  <img src="assets/results-communication-loss-relapse-count.png" alt="Relapse count by duration, communication loss, all six recovery mechanisms" class="graph-image">
+</figure>
+<h3>False-recovery rate (lower is better)</h3>
+<figure class="graph-container">
+  <img src="assets/results-communication-loss-false-recovery-rate.png" alt="False-recovery rate by duration, communication loss, detector-based mechanisms" class="graph-image">
+</figure>
+<h3>Intervention recall (higher is better)</h3>
+<figure class="graph-container">
+  <img src="assets/results-communication-loss-intervention-recall.png" alt="Intervention recall by duration, communication loss, detector-based mechanisms" class="graph-image">
+</figure>
+<p><strong>Findings.</strong> This fault only degrades the press channel's forward-looking signal about the sort stage — the press agent's own local sensing stays accurate — making it the mildest, most partial-information fault in the suite. That is consistent with fault_tolerant_marl's domain-randomized training transferring well here while it does not for the near-total failures (agent dropout, Byzantine): the degradation is small enough that a policy trained for general robustness has an easier job than a policy trying to substitute for a fully broken or adversarial teammate. It is also the one fault class where an active mechanism (supervisor) is clearly worse than doing nothing on both headline metrics — see cross-fault conclusions.</p>
+
+<h2 id="byzantine">Byzantine / adversarial agents</h2>
+<p>A cooperative agent's policy is replaced with an adversarial one, in one of three modes (fixed-malicious, worst-action, random-malicious), pooled across modes below.</p>
+
+<h3>Corrected degradation-area (lower is better)</h3>
+<figure class="graph-container">
+  <img src="assets/results-byzantine-adversarial-degradation-area.png" alt="Corrected degradation-area by target and duration, Byzantine adversarial agents, all six recovery mechanisms" class="graph-image">
+  <figcaption>Pooled means: none 66.4, fault_tolerant_marl 67.1, rule_based 11.8, rule_based_detect 30.2, supervisor 41.3, llm_replanning 50.4.</figcaption>
+</figure>
+<h3>Weighted safety-violation excess (lower is better)</h3>
+<figure class="graph-container">
+  <img src="assets/results-byzantine-adversarial-safety-excess.png" alt="Weighted safety-violation excess by target and duration, Byzantine adversarial agents, all six recovery mechanisms" class="graph-image">
+  <figcaption>none 810.3 and fault_tolerant_marl 812.5 (statistically identical) against rule_based's 61.1 — a ~13x gap, second only to agent dropout.</figcaption>
+</figure>
+<h3>Fraction of window spent healthy (higher is better)</h3>
+<figure class="graph-container">
+  <img src="assets/results-byzantine-adversarial-fraction-time-healthy.png" alt="Fraction of window spent healthy by target and duration, Byzantine adversarial agents, all six recovery mechanisms" class="graph-image">
+</figure>
+<h3>Relapse count (lower is better)</h3>
+<figure class="graph-container">
+  <img src="assets/results-byzantine-adversarial-relapse-count.png" alt="Relapse count by target and duration, Byzantine adversarial agents, all six recovery mechanisms" class="graph-image">
+</figure>
+<h3>False-recovery rate (lower is better)</h3>
+<figure class="graph-container">
+  <img src="assets/results-byzantine-adversarial-false-recovery-rate.png" alt="False-recovery rate by target and duration, Byzantine adversarial agents, detector-based mechanisms" class="graph-image">
+</figure>
+<h3>Intervention recall (higher is better)</h3>
+<figure class="graph-container">
+  <img src="assets/results-byzantine-adversarial-intervention-recall.png" alt="Intervention recall by target and duration, Byzantine adversarial agents, detector-based mechanisms" class="graph-image">
+</figure>
+<p><strong>Findings.</strong> Same shape as agent dropout: none and fault_tolerant_marl are tied at the bottom, every corrective mechanism is a large, clear improvement on safety, and rule_based_detect (30.2) clearly outperforms supervisor (41.3) and llm_replanning (50.4) here specifically — unlike sensor noise, where supervisor's higher recall paid off, an adversarial agent appears harder for the learned supervisor policy to characterize than a self-detected reward drop.</p>
+
+<h2 id="conclusions">Cross-fault conclusions</h2>
+
+<h3>Doing nothing is safe only against the mildest faults</h3>
+<p><code>none</code> and <code>fault_tolerant_marl</code> are statistically indistinguishable from each other on both degradation-area and safety-violation excess for actuator degradation, agent dropout, and Byzantine — and both sit roughly an order of magnitude worse on safety than any actively-correcting mechanism for agent dropout (~17x) and Byzantine (~13x). For faults that fully compromise an agent's decision-making, leaving it uncorrected is measurably dangerous, not just measurably suboptimal — this is the strongest, most defensible result in the suite. The one exception is communication loss, the mildest and most partial fault tested, where fault_tolerant_marl outright wins.</p>
+
+<h3>The oracle's outcome does not depend on the fault type</h3>
+<p><code>rule_based</code> reports near-identical degradation-area, safety-excess, and healthy-fraction across sensor noise, actuator degradation, agent dropout, and Byzantine (comms_loss differs because it is structurally a press-only fault). This is not an artifact of the evaluation — it is a direct consequence of the mechanism's design. Once an oracle recovery mechanism engages, it fully overrides the affected channel's decision with a state-following heuristic for the remainder of the fault window; the specific mechanism that corrupted the original decision becomes irrelevant, because that original decision is discarded entirely. What matters to an oracle is only <em>when</em> and <em>where</em> it engages, never <em>what</em> caused the engagement. This is a real, structural property worth stating plainly rather than a coincidence to explain away.</p>
+
+<h3>Detection quality is a genuine precision/recall trade-off between mechanisms</h3>
+<p>The three self-detecting arms sit at different points on the trade-off. <code>supervisor</code> has the highest recall of any real detector on sensor noise (0.75–0.83, vs. 0.14–0.5 for the other two) but also the highest false-recovery rate (~0.57–0.58, vs. ~0.40–0.47) and the worst degradation-area/safety-excess on the fault-target combinations where it over-triggers. <code>rule_based_detect</code> and <code>llm_replanning</code> — which share the same underlying detector — sit closer together, trading lower recall for fewer false alarms. Which end of that trade-off is preferable is fault-dependent: <code>supervisor</code>'s high recall helps on Byzantine and agent dropout, where missing the fault is costly, but its high false-positive rate is what makes it the single worst-performing mechanism on communication loss, the mildest fault in the suite, where correction is rarely needed at all.</p>
+
+<h3>Pooled numbers hide fault-target structure large enough to change conclusions</h3>
+<p>Averaging across a fault's target (sort agent / press agent / both) can average together results that differ by 50x or more, as with <code>supervisor</code> under sensor noise: near-zero corrected degradation-area on target=sort, roughly 50x that on target=press/both. A pooled headline number for that cell would read as an unremarkable middling result; the faceted view shows it is actually "irrelevant on one channel, one of the worst arms tested on the other." Any comparison across mechanisms should be read at the target/duration level, not the pooled level, before it is trusted.</p>
+
+<h3>What this does and does not establish</h3>
+<p>Null-result rates ranged from 0% to 59% across (fault, recovery) combinations — a meaningful fraction of individual fault instances, especially for sensor noise, are not statistically distinguishable from ordinary episode noise at the configured injection strength. This is expected and is not filtered out of the reported means; with 8 seeds per cell it washes out rather than dominating the average, but it does mean the confidence intervals shown should be read as indicative rather than as a formal significance test — no paired significance testing across mechanisms has been run yet. The safety-violation-excess and degradation-area results for agent dropout, Byzantine, and actuator degradation are large enough relative to their confidence intervals to be read with confidence; results for the milder sensor-noise and communication-loss classes, and any single target/duration cell with a wide error bar, should be treated as directional rather than conclusive.</p>
+
+  <footer class="footer">
+    <p>This site documents the experimental work associated with the FaultBench-Industrial research project.</p>
+    <p>Results on this page were generated from a single full sweep (8 seed realizations per combination); regenerating the sweep will change the exact figures quoted above.</p>
+  </footer>
+</main>
+</div>
+</body>
+</html>

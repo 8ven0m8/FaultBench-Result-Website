@@ -152,7 +152,7 @@
     <span>·</span>
     <span>Experimental record</span>
   </div>
-  <div class="article-kicker">Byzantine / adversarial agents / Transient</div><h1>Hierarchical supervisor-agent</h1><p class="lede">Transient byzantine / adversarial agents evaluation</p><div class="notice"><b>Fault:</b> Byzantine / adversarial agents<br>
+<div class="article-kicker">Byzantine / adversarial agents / Transient</div><h1>Hierarchical supervisor-agent</h1><p class="lede">Transient byzantine / adversarial agents evaluation</p><div class="notice"><b>Fault:</b> Byzantine / adversarial agents<br>
 <b>Duration:</b> Transient<br>
 <b>Recovery mechanism:</b> Hierarchical supervisor-agent</div>
 <h2>Experiment definition</h2>
@@ -163,15 +163,62 @@
 <tr><td>Degradation-area</td><td>—</td></tr>
 <tr><td>False-recovery rate</td><td>—</td></tr>
 <tr><td>Safety-violation count</td><td>—</td></tr></table>
-<h2>Graph</h2>
-<figure class="graph-placeholder">
-  <div class="graph-axis">
-    <div class="graph-empty">Graph placeholder</div>
-    <span class="axis-y">Performance</span>
-    <span class="axis-x">Environment steps</span>
-  </div>
-  <figcaption>Byzantine / adversarial agents — Transient — Hierarchical supervisor-agent. Replace this placeholder with the corresponding experimental figure.</figcaption>
+<h2>Experimental trajectory graphs</h2>
+<p>One representative seed (seed 0 of 8) per target × mode combination from the full sweep. See the <a href="results.html">Results</a> page for the multi-seed aggregate comparison across mechanisms.</p>
+<h4>Sorting Agent Target (fixed malicious mode)</h4>
+<figure class="graph-container">
+  <img src="assets/byzantine-adversarial-transient-supervisor-fixed-malicious-sort.svg" alt="Byzantine / adversarial agents transient fault, Hierarchical supervisor-agent, Sorting Agent Target (fixed malicious mode)" class="graph-image">
+  <figcaption>Hierarchical supervisor-agent — Sorting Agent Target (fixed malicious mode) — evaluation trajectory under transient byzantine / adversarial agents (fault onset randomized between steps 40-60), seed 0 of the 8-seed sweep.</figcaption>
 </figure>
+
+<h4>Pressing Agent Target (fixed malicious mode)</h4>
+<figure class="graph-container">
+  <img src="assets/byzantine-adversarial-transient-supervisor-fixed-malicious-press.svg" alt="Byzantine / adversarial agents transient fault, Hierarchical supervisor-agent, Pressing Agent Target (fixed malicious mode)" class="graph-image">
+  <figcaption>Hierarchical supervisor-agent — Pressing Agent Target (fixed malicious mode) — evaluation trajectory under transient byzantine / adversarial agents (fault onset randomized between steps 40-60), seed 0 of the 8-seed sweep.</figcaption>
+</figure>
+
+<h4>Both Agents Target (fixed malicious mode)</h4>
+<figure class="graph-container">
+  <img src="assets/byzantine-adversarial-transient-supervisor-fixed-malicious-both.svg" alt="Byzantine / adversarial agents transient fault, Hierarchical supervisor-agent, Both Agents Target (fixed malicious mode)" class="graph-image">
+  <figcaption>Hierarchical supervisor-agent — Both Agents Target (fixed malicious mode) — evaluation trajectory under transient byzantine / adversarial agents (fault onset randomized between steps 40-60), seed 0 of the 8-seed sweep.</figcaption>
+</figure>
+
+<h4>Sorting Agent Target (random malicious mode)</h4>
+<figure class="graph-container">
+  <img src="assets/byzantine-adversarial-transient-supervisor-random-malicious-sort.svg" alt="Byzantine / adversarial agents transient fault, Hierarchical supervisor-agent, Sorting Agent Target (random malicious mode)" class="graph-image">
+  <figcaption>Hierarchical supervisor-agent — Sorting Agent Target (random malicious mode) — evaluation trajectory under transient byzantine / adversarial agents (fault onset randomized between steps 40-60), seed 0 of the 8-seed sweep.</figcaption>
+</figure>
+
+<h4>Pressing Agent Target (random malicious mode)</h4>
+<figure class="graph-container">
+  <img src="assets/byzantine-adversarial-transient-supervisor-random-malicious-press.svg" alt="Byzantine / adversarial agents transient fault, Hierarchical supervisor-agent, Pressing Agent Target (random malicious mode)" class="graph-image">
+  <figcaption>Hierarchical supervisor-agent — Pressing Agent Target (random malicious mode) — evaluation trajectory under transient byzantine / adversarial agents (fault onset randomized between steps 40-60), seed 0 of the 8-seed sweep.</figcaption>
+</figure>
+
+<h4>Both Agents Target (random malicious mode)</h4>
+<figure class="graph-container">
+  <img src="assets/byzantine-adversarial-transient-supervisor-random-malicious-both.svg" alt="Byzantine / adversarial agents transient fault, Hierarchical supervisor-agent, Both Agents Target (random malicious mode)" class="graph-image">
+  <figcaption>Hierarchical supervisor-agent — Both Agents Target (random malicious mode) — evaluation trajectory under transient byzantine / adversarial agents (fault onset randomized between steps 40-60), seed 0 of the 8-seed sweep.</figcaption>
+</figure>
+
+<h4>Sorting Agent Target (worst action mode)</h4>
+<figure class="graph-container">
+  <img src="assets/byzantine-adversarial-transient-supervisor-worst-action-sort.svg" alt="Byzantine / adversarial agents transient fault, Hierarchical supervisor-agent, Sorting Agent Target (worst action mode)" class="graph-image">
+  <figcaption>Hierarchical supervisor-agent — Sorting Agent Target (worst action mode) — evaluation trajectory under transient byzantine / adversarial agents (fault onset randomized between steps 40-60), seed 0 of the 8-seed sweep.</figcaption>
+</figure>
+
+<h4>Pressing Agent Target (worst action mode)</h4>
+<figure class="graph-container">
+  <img src="assets/byzantine-adversarial-transient-supervisor-worst-action-press.svg" alt="Byzantine / adversarial agents transient fault, Hierarchical supervisor-agent, Pressing Agent Target (worst action mode)" class="graph-image">
+  <figcaption>Hierarchical supervisor-agent — Pressing Agent Target (worst action mode) — evaluation trajectory under transient byzantine / adversarial agents (fault onset randomized between steps 40-60), seed 0 of the 8-seed sweep.</figcaption>
+</figure>
+
+<h4>Both Agents Target (worst action mode)</h4>
+<figure class="graph-container">
+  <img src="assets/byzantine-adversarial-transient-supervisor-worst-action-both.svg" alt="Byzantine / adversarial agents transient fault, Hierarchical supervisor-agent, Both Agents Target (worst action mode)" class="graph-image">
+  <figcaption>Hierarchical supervisor-agent — Both Agents Target (worst action mode) — evaluation trajectory under transient byzantine / adversarial agents (fault onset randomized between steps 40-60), seed 0 of the 8-seed sweep.</figcaption>
+</figure>
+
 <h2>Notes</h2>
 <p>This page is intentionally separated from the paper-facing results so that full-resolution plots, additional seeds, and diagnostic figures can be documented without overloading the publication.</p>
   <footer class="footer">

@@ -154,6 +154,19 @@
   </div>
   <div class="article-kicker">Fault injection</div><h1>Agent dropout</h1><p class="lede">Zero out an agent&#x27;s participation entirely</p><h2>Injection definition</h2>
 <p>Agent dropout models complete hardware node crashes, power outages, or physical failures by instantly zeroing out a target agent's participation in the multi-agent system (randomized onset between steps 40–60). The failed agent stops publishing state updates, issuing control actions, or responding to coordination signals. Surrounding agents must dynamically detect the missing node and redistribute workload across remaining functional units without causing system overflow or deadlock.</p>
+<h2>Experimental trajectory graphs</h2>
+
+<h3>Permanent fault mode</h3>
+<figure class="graph-container">
+  <img src="assets/agent-dropout-permanent-graph.png" alt="Permanent agent dropout fault trajectory graph" class="graph-image">
+  <figcaption>Permanent agent dropout fault trajectory showing the active fault window (onset at step 40, persisting through step 200). Agent participation drops causing container level overflow, 0 presses executed, and cumulative reward degradation (-77.16) without recovery intervention.</figcaption>
+</figure>
+
+<h3>Transient fault mode (40–60 timesteps)</h3>
+<figure class="graph-container">
+  <img src="assets/agent-dropout-transient-graph.png" alt="Transient agent dropout fault trajectory graph (40-60 timesteps)" class="graph-image">
+  <figcaption>Transient agent dropout fault trajectory showing the bounded fault window active between steps 40–60. Displays press recovery after step 60, 16783 total material processed, and final cumulative reward of 78.17 without recovery intervention.</figcaption>
+</figure>
 <h2>Duration modes</h2><ul><li><a href="agent-dropout-permanent-rule-based-reconfiguration.html">Permanent</a>: the fault persists for the relevant evaluation.</li><li><a href="agent-dropout-transient-rule-based-reconfiguration.html">Transient</a>: the fault is introduced for a bounded interval.</li></ul>
 <h2>Recovery mechanisms</h2><ul><li><a href="agent-dropout-permanent-rule-based-reconfiguration.html">Rule-based reconfiguration</a></li><li><a href="agent-dropout-permanent-fault-tolerant-trained-marl.html">Fault-tolerant-trained MARL</a></li><li><a href="agent-dropout-permanent-hierarchical-supervisor-agent.html">Hierarchical supervisor-agent</a></li><li><a href="agent-dropout-permanent-llm-agent-replanning.html">LLM-agent replanning</a></li></ul>
   <footer class="footer">

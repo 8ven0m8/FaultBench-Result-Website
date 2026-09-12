@@ -156,16 +156,88 @@
 <p>Actuator degradation restricts, attenuates, or distorts the physical execution of action commands issued by targeted agents. Upon fault onset (randomized between steps 40–60), the environment scales down motor output, caps action magnitudes, or injects mechanical actuation delays (e.g. reduced conveyor speed or restricted press force). While the agent believes it is issuing full control commands, physical system execution is diminished, testing the system's ability to compensate for hardware wear and physical bottlenecks.</p>
 <h2>Experimental trajectory graphs</h2>
 
-<h3>Permanent fault mode</h3>
+<h3>Stuck Mode — Permanent Duration</h3>
 <figure class="graph-container">
-  <img src="assets/actuator-degradation-permanent-graph.png" alt="Permanent actuator degradation fault trajectory graph" class="graph-image">
-  <figcaption>Permanent actuator degradation (stuck mode) fault trajectory showing the active fault window (onset at step 40, persisting through step 200). Actuators freeze causing container level overflow, 0 presses executed, and severe cumulative reward degradation (-77.16) without recovery intervention.</figcaption>
+  <img src="assets/actuator-degradation-permanent-graph.png" alt="Stuck mode permanent actuator degradation fault trajectory graph (Both Targets)" class="graph-image">
+  <figcaption>Stuck Mode — Both Agents Target (Permanent): Actuators freeze at step 40, causing container overflow and severe cumulative reward degradation (-77.16).</figcaption>
+</figure>
+<figure class="graph-container">
+  <img src="assets/actuator-degradation-stuck-permanent-sort.png" alt="Stuck mode permanent actuator degradation fault trajectory graph (Sort Target)" class="graph-image">
+  <figcaption>Stuck Mode — Sorting Agent Target (Permanent): Sorter freezes at fault onset. Final cumulative reward: 59.10.</figcaption>
+</figure>
+<figure class="graph-container">
+  <img src="assets/actuator-degradation-stuck-permanent-press.png" alt="Stuck mode permanent actuator degradation fault trajectory graph (Press Target)" class="graph-image">
+  <figcaption>Stuck Mode — Pressing Agent Target (Permanent): Pressing seizes idle. Final cumulative reward: -55.82.</figcaption>
 </figure>
 
-<h3>Transient fault mode (40–60 timesteps)</h3>
+<h3>Stuck Mode — Transient Duration (Steps 40–60)</h3>
 <figure class="graph-container">
-  <img src="assets/actuator-degradation-transient-graph.png" alt="Transient actuator degradation fault trajectory graph (40-60 timesteps)" class="graph-image">
-  <figcaption>Transient actuator degradation (stuck mode) fault trajectory showing the bounded fault window active between steps 40–60. Displays press recovery after step 60, 16783 total material processed, and final cumulative reward of 78.17 without recovery intervention.</figcaption>
+  <img src="assets/actuator-degradation-transient-graph.png" alt="Stuck mode transient actuator degradation fault trajectory graph (Both Targets)" class="graph-image">
+  <figcaption>Stuck Mode — Both Agents Target (Transient): Actuators freeze during steps 40–60 and recover. Final cumulative reward: 78.17.</figcaption>
+</figure>
+<figure class="graph-container">
+  <img src="assets/actuator-degradation-stuck-transient-sort.png" alt="Stuck mode transient actuator degradation fault trajectory graph (Sort Target)" class="graph-image">
+  <figcaption>Stuck Mode — Sorting Agent Target (Transient): Sorter freezes during steps 40–60. Final cumulative reward: 107.95.</figcaption>
+</figure>
+<figure class="graph-container">
+  <img src="assets/actuator-degradation-stuck-transient-press.png" alt="Stuck mode transient actuator degradation fault trajectory graph (Press Target)" class="graph-image">
+  <figcaption>Stuck Mode — Pressing Agent Target (Transient): Pressing seizes during steps 40–60. Final cumulative reward: 78.17.</figcaption>
+</figure>
+
+<h3>Restrict Mode — Permanent Duration</h3>
+<figure class="graph-container">
+  <img src="assets/actuator-degradation-restrict-permanent-both.png" alt="Restrict mode permanent actuator degradation fault trajectory graph (Both Targets)" class="graph-image">
+  <figcaption>Restrict Mode — Both Agents Target (Permanent): Restricts sort mode and press 2 permanently. Final cumulative reward: -80.90.</figcaption>
+</figure>
+<figure class="graph-container">
+  <img src="assets/actuator-degradation-restrict-permanent-sort.png" alt="Restrict mode permanent actuator degradation fault trajectory graph (Sort Target)" class="graph-image">
+  <figcaption>Restrict Mode — Sorting Agent Target (Permanent): Sort mode 1 is permanently disabled. Final cumulative reward: 88.76.</figcaption>
+</figure>
+<figure class="graph-container">
+  <img src="assets/actuator-degradation-restrict-permanent-press.png" alt="Restrict mode permanent actuator degradation fault trajectory graph (Press Target)" class="graph-image">
+  <figcaption>Restrict Mode — Pressing Agent Target (Permanent): Press 2 is permanently disabled. Final cumulative reward: -50.82.</figcaption>
+</figure>
+
+<h3>Restrict Mode — Transient Duration (Steps 40–60)</h3>
+<figure class="graph-container">
+  <img src="assets/actuator-degradation-restrict-transient-both.png" alt="Restrict mode transient actuator degradation fault trajectory graph (Both Targets)" class="graph-image">
+  <figcaption>Restrict Mode — Both Agents Target (Transient): Range restricted during steps 40–60. Final cumulative reward: 61.25.</figcaption>
+</figure>
+<figure class="graph-container">
+  <img src="assets/actuator-degradation-restrict-transient-sort.png" alt="Restrict mode transient actuator degradation fault trajectory graph (Sort Target)" class="graph-image">
+  <figcaption>Restrict Mode — Sorting Agent Target (Transient): Sort mode disabled during steps 40–60. Final cumulative reward: 91.97.</figcaption>
+</figure>
+<figure class="graph-container">
+  <img src="assets/actuator-degradation-restrict-transient-press.png" alt="Restrict mode transient actuator degradation fault trajectory graph (Press Target)" class="graph-image">
+  <figcaption>Restrict Mode — Pressing Agent Target (Transient): Press 2 disabled during steps 40–60. Final cumulative reward: 77.18.</figcaption>
+</figure>
+
+<h3>Slip Mode — Permanent Duration</h3>
+<figure class="graph-container">
+  <img src="assets/actuator-degradation-slip-permanent-both.png" alt="Slip mode permanent actuator degradation fault trajectory graph (Both Targets)" class="graph-image">
+  <figcaption>Slip Mode — Both Agents Target (Permanent): Stochastic action slippage (p=0.3) persists through episode. Final cumulative reward: 33.19.</figcaption>
+</figure>
+<figure class="graph-container">
+  <img src="assets/actuator-degradation-slip-permanent-sort.png" alt="Slip mode permanent actuator degradation fault trajectory graph (Sort Target)" class="graph-image">
+  <figcaption>Slip Mode — Sorting Agent Target (Permanent): Sorter action flips with p=0.3. Final cumulative reward: 98.90.</figcaption>
+</figure>
+<figure class="graph-container">
+  <img src="assets/actuator-degradation-slip-permanent-press.png" alt="Slip mode permanent actuator degradation fault trajectory graph (Press Target)" class="graph-image">
+  <figcaption>Slip Mode — Pressing Agent Target (Permanent): Pressing drops to no-op with p=0.3. Final cumulative reward: 69.12.</figcaption>
+</figure>
+
+<h3>Slip Mode — Transient Duration (Steps 40–60)</h3>
+<figure class="graph-container">
+  <img src="assets/actuator-degradation-slip-transient-both.png" alt="Slip mode transient actuator degradation fault trajectory graph (Both Targets)" class="graph-image">
+  <figcaption>Slip Mode — Both Agents Target (Transient): Action slippage active during steps 40–60. Final cumulative reward: 70.36.</figcaption>
+</figure>
+<figure class="graph-container">
+  <img src="assets/actuator-degradation-slip-transient-sort.png" alt="Slip mode transient actuator degradation fault trajectory graph (Sort Target)" class="graph-image">
+  <figcaption>Slip Mode — Sorting Agent Target (Transient): Sorter action flips during steps 40–60. Final cumulative reward: 79.92.</figcaption>
+</figure>
+<figure class="graph-container">
+  <img src="assets/actuator-degradation-slip-transient-press.png" alt="Slip mode transient actuator degradation fault trajectory graph (Press Target)" class="graph-image">
+  <figcaption>Slip Mode — Pressing Agent Target (Transient): Pressing drops to no-op during steps 40–60. Final cumulative reward: 47.99.</figcaption>
 </figure>
 <h2>Duration modes</h2><ul><li><a href="actuator-degradation-permanent-rule-based-reconfiguration.html">Permanent</a>: the fault persists for the relevant evaluation.</li><li><a href="actuator-degradation-transient-rule-based-reconfiguration.html">Transient</a>: the fault is introduced for a bounded interval.</li></ul>
 <h2>Recovery mechanisms</h2><ul><li><a href="actuator-degradation-permanent-rule-based-reconfiguration.html">Rule-based reconfiguration</a></li><li><a href="actuator-degradation-permanent-fault-tolerant-trained-marl.html">Fault-tolerant-trained MARL</a></li><li><a href="actuator-degradation-permanent-hierarchical-supervisor-agent.html">Hierarchical supervisor-agent</a></li><li><a href="actuator-degradation-permanent-llm-agent-replanning.html">LLM-agent replanning</a></li></ul>

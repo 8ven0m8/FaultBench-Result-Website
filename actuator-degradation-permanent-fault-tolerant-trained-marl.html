@@ -152,7 +152,7 @@
     <span>·</span>
     <span>Experimental record</span>
   </div>
-  <div class="article-kicker">Actuator degradation / Permanent</div><h1>Fault-tolerant-trained MARL</h1><p class="lede">Permanent actuator degradation evaluation</p><div class="notice"><b>Fault:</b> Actuator degradation<br>
+<div class="article-kicker">Actuator degradation / Permanent</div><h1>Fault-tolerant-trained MARL</h1><p class="lede">Permanent actuator degradation evaluation</p><div class="notice"><b>Fault:</b> Actuator degradation<br>
 <b>Duration:</b> Permanent<br>
 <b>Recovery mechanism:</b> Fault-tolerant-trained MARL</div>
 <h2>Experiment definition</h2>
@@ -163,11 +163,62 @@
 <tr><td>Degradation-area</td><td>—</td></tr>
 <tr><td>False-recovery rate</td><td>—</td></tr>
 <tr><td>Safety-violation count</td><td>—</td></tr></table>
-<h2>Experimental trajectory graph</h2>
+<h2>Experimental trajectory graphs</h2>
+<p>One representative seed (seed 0 of 8) per target × mode combination from the full sweep. See the <a href="results.html">Results</a> page for the multi-seed aggregate comparison across mechanisms.</p>
+<h4>Sorting Agent Target (restrict mode)</h4>
 <figure class="graph-container">
-  <img src="assets/actuator-degradation-permanent-fault-tolerant-trained-marl.png" alt="Actuator degradation permanent fault with fault-tolerant trained MARL graph" class="graph-image">
-  <figcaption>Experimental evaluation trajectory under permanent actuator degradation (stuck mode onset at step 40) with Fault-Tolerant-Trained MARL active. Shows sorting purity, container fill levels, 2104 total material processed, and final cumulative rewards (-78.93).</figcaption>
+  <img src="assets/actuator-degradation-permanent-fault-tolerant-restrict-sort.svg" alt="Actuator degradation permanent fault, Fault-tolerant-trained MARL, Sorting Agent Target (restrict mode)" class="graph-image">
+  <figcaption>Fault-tolerant-trained MARL — Sorting Agent Target (restrict mode) — evaluation trajectory under permanent actuator degradation (fault onset randomized between steps 40-60), seed 0 of the 8-seed sweep.</figcaption>
 </figure>
+
+<h4>Pressing Agent Target (restrict mode)</h4>
+<figure class="graph-container">
+  <img src="assets/actuator-degradation-permanent-fault-tolerant-restrict-press.svg" alt="Actuator degradation permanent fault, Fault-tolerant-trained MARL, Pressing Agent Target (restrict mode)" class="graph-image">
+  <figcaption>Fault-tolerant-trained MARL — Pressing Agent Target (restrict mode) — evaluation trajectory under permanent actuator degradation (fault onset randomized between steps 40-60), seed 0 of the 8-seed sweep.</figcaption>
+</figure>
+
+<h4>Both Agents Target (restrict mode)</h4>
+<figure class="graph-container">
+  <img src="assets/actuator-degradation-permanent-fault-tolerant-restrict-both.svg" alt="Actuator degradation permanent fault, Fault-tolerant-trained MARL, Both Agents Target (restrict mode)" class="graph-image">
+  <figcaption>Fault-tolerant-trained MARL — Both Agents Target (restrict mode) — evaluation trajectory under permanent actuator degradation (fault onset randomized between steps 40-60), seed 0 of the 8-seed sweep.</figcaption>
+</figure>
+
+<h4>Sorting Agent Target (slip mode)</h4>
+<figure class="graph-container">
+  <img src="assets/actuator-degradation-permanent-fault-tolerant-slip-sort.svg" alt="Actuator degradation permanent fault, Fault-tolerant-trained MARL, Sorting Agent Target (slip mode)" class="graph-image">
+  <figcaption>Fault-tolerant-trained MARL — Sorting Agent Target (slip mode) — evaluation trajectory under permanent actuator degradation (fault onset randomized between steps 40-60), seed 0 of the 8-seed sweep.</figcaption>
+</figure>
+
+<h4>Pressing Agent Target (slip mode)</h4>
+<figure class="graph-container">
+  <img src="assets/actuator-degradation-permanent-fault-tolerant-slip-press.svg" alt="Actuator degradation permanent fault, Fault-tolerant-trained MARL, Pressing Agent Target (slip mode)" class="graph-image">
+  <figcaption>Fault-tolerant-trained MARL — Pressing Agent Target (slip mode) — evaluation trajectory under permanent actuator degradation (fault onset randomized between steps 40-60), seed 0 of the 8-seed sweep.</figcaption>
+</figure>
+
+<h4>Both Agents Target (slip mode)</h4>
+<figure class="graph-container">
+  <img src="assets/actuator-degradation-permanent-fault-tolerant-slip-both.svg" alt="Actuator degradation permanent fault, Fault-tolerant-trained MARL, Both Agents Target (slip mode)" class="graph-image">
+  <figcaption>Fault-tolerant-trained MARL — Both Agents Target (slip mode) — evaluation trajectory under permanent actuator degradation (fault onset randomized between steps 40-60), seed 0 of the 8-seed sweep.</figcaption>
+</figure>
+
+<h4>Sorting Agent Target (stuck mode)</h4>
+<figure class="graph-container">
+  <img src="assets/actuator-degradation-permanent-fault-tolerant-stuck-sort.svg" alt="Actuator degradation permanent fault, Fault-tolerant-trained MARL, Sorting Agent Target (stuck mode)" class="graph-image">
+  <figcaption>Fault-tolerant-trained MARL — Sorting Agent Target (stuck mode) — evaluation trajectory under permanent actuator degradation (fault onset randomized between steps 40-60), seed 0 of the 8-seed sweep.</figcaption>
+</figure>
+
+<h4>Pressing Agent Target (stuck mode)</h4>
+<figure class="graph-container">
+  <img src="assets/actuator-degradation-permanent-fault-tolerant-stuck-press.svg" alt="Actuator degradation permanent fault, Fault-tolerant-trained MARL, Pressing Agent Target (stuck mode)" class="graph-image">
+  <figcaption>Fault-tolerant-trained MARL — Pressing Agent Target (stuck mode) — evaluation trajectory under permanent actuator degradation (fault onset randomized between steps 40-60), seed 0 of the 8-seed sweep.</figcaption>
+</figure>
+
+<h4>Both Agents Target (stuck mode)</h4>
+<figure class="graph-container">
+  <img src="assets/actuator-degradation-permanent-fault-tolerant-stuck-both.svg" alt="Actuator degradation permanent fault, Fault-tolerant-trained MARL, Both Agents Target (stuck mode)" class="graph-image">
+  <figcaption>Fault-tolerant-trained MARL — Both Agents Target (stuck mode) — evaluation trajectory under permanent actuator degradation (fault onset randomized between steps 40-60), seed 0 of the 8-seed sweep.</figcaption>
+</figure>
+
 <h2>Notes</h2>
 <p>This page is intentionally separated from the paper-facing results so that full-resolution plots, additional seeds, and diagnostic figures can be documented without overloading the publication.</p>
   <footer class="footer">
