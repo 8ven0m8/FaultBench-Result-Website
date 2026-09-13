@@ -280,4 +280,62 @@ figcaption { padding: 10px 13px; color: var(--muted); font-size: 12px; }
   }
   .tagline { display: none; }
   h1 { font-size: 28px; }
+  /* Generic safety net: a table wider than the viewport scrolls within
+     itself instead of relying on html/body's overflow-x:hidden (set above,
+     to stop the fixed sidebar from causing page-wide horizontal scroll),
+     which would otherwise just cut its content off instead of showing it. */
+  table {
+    display: block;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    max-width: 100%;
+  }
+  /* Tables with a long free-text column (e.g. the metric glossary on
+     results.html) don't actually overflow at mobile widths - the browser
+     just squeezes every column down and word-wraps until it fits, which
+     produces a very tall, cramped, hard-to-read table instead. Restack
+     each row as a labeled card instead of forcing a 3-column grid into a
+     narrow screen: one field per line, its header repeated via
+     data-label. */
+  table.metric-table {
+    display: block;
+    overflow-x: visible;
+  }
+  table.metric-table tbody,
+  table.metric-table tr,
+  table.metric-table td {
+    display: block;
+    width: 100%;
+  }
+  table.metric-table thead {
+    display: none;
+  }
+  table.metric-table tr {
+    border: 1px solid var(--soft-border);
+    border-radius: 4px;
+    margin: 0 0 14px;
+  }
+  table.metric-table tr:first-child {
+    /* the header row is a <tr> of <th>, not a <thead>, on this page */
+    display: none;
+  }
+  table.metric-table td {
+    border: none;
+    border-bottom: 1px solid var(--soft-border);
+    padding: 8px 12px;
+  }
+  table.metric-table td:last-child {
+    border-bottom: none;
+  }
+  table.metric-table td::before {
+    content: attr(data-label);
+    display: block;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: .03em;
+    color: var(--muted);
+    margin-bottom: 3px;
+  }
 }
