@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Byzantine / adversarial agents — Transient — LLM-agent replanning — FaultBench-Industrial Research</title>
+<title>Byzantine / adversarial agents - Transient - LLM-agent replanning - FaultBench-Industrial Research</title>
 <link rel="stylesheet" href="assets/wiki.css">
 <script src="assets/wiki.js"></script>
 </head>
@@ -156,67 +156,68 @@
 <b>Duration:</b> Transient<br>
 <b>Recovery mechanism:</b> LLM-agent replanning</div>
 <h2>Experiment definition</h2>
-<p>The experiment evaluates <b>LLM-agent replanning</b> under a <b>transient</b> byzantine / adversarial agents injection. Fault onset is randomized around environment steps 40–60 according to the implementation plan.</p>
+<p>The experiment evaluates <b>LLM-agent replanning</b> under a <b>transient</b> byzantine / adversarial agents injection. Fault onset is randomized around environment steps 40-60 according to the implementation plan.</p>
 <h2>Expected evaluation record</h2>
 <table><tr><th>Metric</th><th>Recorded value</th></tr>
-<tr><td>Time-to-recovery</td><td>—</td></tr>
-<tr><td>Degradation-area</td><td>—</td></tr>
-<tr><td>False-recovery rate</td><td>—</td></tr>
-<tr><td>Safety-violation count</td><td>—</td></tr></table>
+<tr><td>Time-to-recovery</td><td>74.2 steps (mean, n=30 recovered non-null of 72)</td></tr>
+<tr><td>Degradation-area</td><td>25.60 (corrected; mean, n=72)</td></tr>
+<tr><td>False-recovery rate</td><td>0.847 (mean, n=72 runs)</td></tr>
+<tr><td>Safety-violation count</td><td>66.8 (mean raw count: catastrophic+severe+near-miss, n=72)</td></tr></table>
+<p><em>Values are means across every target &times; duration-fixed combination shown on this page (see graphs below), 8 seeds each. See the <a href="results.html">Results</a> page for confidence intervals and the cross-mechanism comparison.</em></p>
 <h2>Experimental trajectory graphs</h2>
 <p>One representative seed (seed 0 of 8) per target × mode combination from the full sweep. See the <a href="results.html">Results</a> page for the multi-seed aggregate comparison across mechanisms.</p>
 <h4>Sorting Agent Target (fixed malicious mode)</h4>
 <figure class="graph-container">
   <img src="assets/byzantine-adversarial-transient-llm-replanning-fixed-malicious-sort.svg" alt="Byzantine / adversarial agents transient fault, LLM-agent replanning, Sorting Agent Target (fixed malicious mode)" class="graph-image">
-  <figcaption>LLM-agent replanning — Sorting Agent Target (fixed malicious mode) — evaluation trajectory under transient byzantine / adversarial agents (fault onset randomized between steps 40-60), seed 0 of the 8-seed sweep.</figcaption>
+  <figcaption>LLM-agent replanning - Sorting Agent Target (fixed malicious mode) - evaluation trajectory under transient byzantine / adversarial agents (fault onset randomized between steps 40-60), seed 0 of the 8-seed sweep.</figcaption>
 </figure>
 
 <h4>Pressing Agent Target (fixed malicious mode)</h4>
 <figure class="graph-container">
   <img src="assets/byzantine-adversarial-transient-llm-replanning-fixed-malicious-press.svg" alt="Byzantine / adversarial agents transient fault, LLM-agent replanning, Pressing Agent Target (fixed malicious mode)" class="graph-image">
-  <figcaption>LLM-agent replanning — Pressing Agent Target (fixed malicious mode) — evaluation trajectory under transient byzantine / adversarial agents (fault onset randomized between steps 40-60), seed 0 of the 8-seed sweep.</figcaption>
+  <figcaption>LLM-agent replanning - Pressing Agent Target (fixed malicious mode) - evaluation trajectory under transient byzantine / adversarial agents (fault onset randomized between steps 40-60), seed 0 of the 8-seed sweep.</figcaption>
 </figure>
 
 <h4>Both Agents Target (fixed malicious mode)</h4>
 <figure class="graph-container">
   <img src="assets/byzantine-adversarial-transient-llm-replanning-fixed-malicious-both.svg" alt="Byzantine / adversarial agents transient fault, LLM-agent replanning, Both Agents Target (fixed malicious mode)" class="graph-image">
-  <figcaption>LLM-agent replanning — Both Agents Target (fixed malicious mode) — evaluation trajectory under transient byzantine / adversarial agents (fault onset randomized between steps 40-60), seed 0 of the 8-seed sweep.</figcaption>
+  <figcaption>LLM-agent replanning - Both Agents Target (fixed malicious mode) - evaluation trajectory under transient byzantine / adversarial agents (fault onset randomized between steps 40-60), seed 0 of the 8-seed sweep.</figcaption>
 </figure>
 
 <h4>Sorting Agent Target (random malicious mode)</h4>
 <figure class="graph-container">
   <img src="assets/byzantine-adversarial-transient-llm-replanning-random-malicious-sort.svg" alt="Byzantine / adversarial agents transient fault, LLM-agent replanning, Sorting Agent Target (random malicious mode)" class="graph-image">
-  <figcaption>LLM-agent replanning — Sorting Agent Target (random malicious mode) — evaluation trajectory under transient byzantine / adversarial agents (fault onset randomized between steps 40-60), seed 0 of the 8-seed sweep.</figcaption>
+  <figcaption>LLM-agent replanning - Sorting Agent Target (random malicious mode) - evaluation trajectory under transient byzantine / adversarial agents (fault onset randomized between steps 40-60), seed 0 of the 8-seed sweep.</figcaption>
 </figure>
 
 <h4>Pressing Agent Target (random malicious mode)</h4>
 <figure class="graph-container">
   <img src="assets/byzantine-adversarial-transient-llm-replanning-random-malicious-press.svg" alt="Byzantine / adversarial agents transient fault, LLM-agent replanning, Pressing Agent Target (random malicious mode)" class="graph-image">
-  <figcaption>LLM-agent replanning — Pressing Agent Target (random malicious mode) — evaluation trajectory under transient byzantine / adversarial agents (fault onset randomized between steps 40-60), seed 0 of the 8-seed sweep.</figcaption>
+  <figcaption>LLM-agent replanning - Pressing Agent Target (random malicious mode) - evaluation trajectory under transient byzantine / adversarial agents (fault onset randomized between steps 40-60), seed 0 of the 8-seed sweep.</figcaption>
 </figure>
 
 <h4>Both Agents Target (random malicious mode)</h4>
 <figure class="graph-container">
   <img src="assets/byzantine-adversarial-transient-llm-replanning-random-malicious-both.svg" alt="Byzantine / adversarial agents transient fault, LLM-agent replanning, Both Agents Target (random malicious mode)" class="graph-image">
-  <figcaption>LLM-agent replanning — Both Agents Target (random malicious mode) — evaluation trajectory under transient byzantine / adversarial agents (fault onset randomized between steps 40-60), seed 0 of the 8-seed sweep.</figcaption>
+  <figcaption>LLM-agent replanning - Both Agents Target (random malicious mode) - evaluation trajectory under transient byzantine / adversarial agents (fault onset randomized between steps 40-60), seed 0 of the 8-seed sweep.</figcaption>
 </figure>
 
 <h4>Sorting Agent Target (worst action mode)</h4>
 <figure class="graph-container">
   <img src="assets/byzantine-adversarial-transient-llm-replanning-worst-action-sort.svg" alt="Byzantine / adversarial agents transient fault, LLM-agent replanning, Sorting Agent Target (worst action mode)" class="graph-image">
-  <figcaption>LLM-agent replanning — Sorting Agent Target (worst action mode) — evaluation trajectory under transient byzantine / adversarial agents (fault onset randomized between steps 40-60), seed 0 of the 8-seed sweep.</figcaption>
+  <figcaption>LLM-agent replanning - Sorting Agent Target (worst action mode) - evaluation trajectory under transient byzantine / adversarial agents (fault onset randomized between steps 40-60), seed 0 of the 8-seed sweep.</figcaption>
 </figure>
 
 <h4>Pressing Agent Target (worst action mode)</h4>
 <figure class="graph-container">
   <img src="assets/byzantine-adversarial-transient-llm-replanning-worst-action-press.svg" alt="Byzantine / adversarial agents transient fault, LLM-agent replanning, Pressing Agent Target (worst action mode)" class="graph-image">
-  <figcaption>LLM-agent replanning — Pressing Agent Target (worst action mode) — evaluation trajectory under transient byzantine / adversarial agents (fault onset randomized between steps 40-60), seed 0 of the 8-seed sweep.</figcaption>
+  <figcaption>LLM-agent replanning - Pressing Agent Target (worst action mode) - evaluation trajectory under transient byzantine / adversarial agents (fault onset randomized between steps 40-60), seed 0 of the 8-seed sweep.</figcaption>
 </figure>
 
 <h4>Both Agents Target (worst action mode)</h4>
 <figure class="graph-container">
   <img src="assets/byzantine-adversarial-transient-llm-replanning-worst-action-both.svg" alt="Byzantine / adversarial agents transient fault, LLM-agent replanning, Both Agents Target (worst action mode)" class="graph-image">
-  <figcaption>LLM-agent replanning — Both Agents Target (worst action mode) — evaluation trajectory under transient byzantine / adversarial agents (fault onset randomized between steps 40-60), seed 0 of the 8-seed sweep.</figcaption>
+  <figcaption>LLM-agent replanning - Both Agents Target (worst action mode) - evaluation trajectory under transient byzantine / adversarial agents (fault onset randomized between steps 40-60), seed 0 of the 8-seed sweep.</figcaption>
 </figure>
 
 <h2>Notes</h2>

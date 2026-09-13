@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Actuator degradation — Transient — Fault-tolerant-trained MARL — FaultBench-Industrial Research</title>
+<title>Actuator degradation - Transient - Fault-tolerant-trained MARL - FaultBench-Industrial Research</title>
 <link rel="stylesheet" href="assets/wiki.css">
 <script src="assets/wiki.js"></script>
 </head>
@@ -156,67 +156,68 @@
 <b>Duration:</b> Transient<br>
 <b>Recovery mechanism:</b> Fault-tolerant-trained MARL</div>
 <h2>Experiment definition</h2>
-<p>The experiment evaluates <b>Fault-tolerant-trained MARL</b> under a <b>transient</b> actuator degradation injection. Fault onset is randomized around environment steps 40–60 according to the implementation plan.</p>
+<p>The experiment evaluates <b>Fault-tolerant-trained MARL</b> under a <b>transient</b> actuator degradation injection. Fault onset is randomized around environment steps 40-60 according to the implementation plan.</p>
 <h2>Expected evaluation record</h2>
 <table><tr><th>Metric</th><th>Recorded value</th></tr>
-<tr><td>Time-to-recovery</td><td>—</td></tr>
-<tr><td>Degradation-area</td><td>—</td></tr>
-<tr><td>False-recovery rate</td><td>—</td></tr>
-<tr><td>Safety-violation count</td><td>—</td></tr></table>
+<tr><td>Time-to-recovery</td><td>81.3 steps (mean, n=35 recovered non-null of 72)</td></tr>
+<tr><td>Degradation-area</td><td>20.34 (corrected; mean, n=72)</td></tr>
+<tr><td>False-recovery rate</td><td>n/a - no fault detector (trained policy only)</td></tr>
+<tr><td>Safety-violation count</td><td>67.0 (mean raw count: catastrophic+severe+near-miss, n=72)</td></tr></table>
+<p><em>Values are means across every target &times; duration-fixed combination shown on this page (see graphs below), 8 seeds each. See the <a href="results.html">Results</a> page for confidence intervals and the cross-mechanism comparison.</em></p>
 <h2>Experimental trajectory graphs</h2>
 <p>One representative seed (seed 0 of 8) per target × mode combination from the full sweep. See the <a href="results.html">Results</a> page for the multi-seed aggregate comparison across mechanisms.</p>
 <h4>Sorting Agent Target (restrict mode)</h4>
 <figure class="graph-container">
   <img src="assets/actuator-degradation-transient-fault-tolerant-restrict-sort.svg" alt="Actuator degradation transient fault, Fault-tolerant-trained MARL, Sorting Agent Target (restrict mode)" class="graph-image">
-  <figcaption>Fault-tolerant-trained MARL — Sorting Agent Target (restrict mode) — evaluation trajectory under transient actuator degradation (fault onset randomized between steps 40-60), seed 0 of the 8-seed sweep.</figcaption>
+  <figcaption>Fault-tolerant-trained MARL - Sorting Agent Target (restrict mode) - evaluation trajectory under transient actuator degradation (fault onset randomized between steps 40-60), seed 0 of the 8-seed sweep.</figcaption>
 </figure>
 
 <h4>Pressing Agent Target (restrict mode)</h4>
 <figure class="graph-container">
   <img src="assets/actuator-degradation-transient-fault-tolerant-restrict-press.svg" alt="Actuator degradation transient fault, Fault-tolerant-trained MARL, Pressing Agent Target (restrict mode)" class="graph-image">
-  <figcaption>Fault-tolerant-trained MARL — Pressing Agent Target (restrict mode) — evaluation trajectory under transient actuator degradation (fault onset randomized between steps 40-60), seed 0 of the 8-seed sweep.</figcaption>
+  <figcaption>Fault-tolerant-trained MARL - Pressing Agent Target (restrict mode) - evaluation trajectory under transient actuator degradation (fault onset randomized between steps 40-60), seed 0 of the 8-seed sweep.</figcaption>
 </figure>
 
 <h4>Both Agents Target (restrict mode)</h4>
 <figure class="graph-container">
   <img src="assets/actuator-degradation-transient-fault-tolerant-restrict-both.svg" alt="Actuator degradation transient fault, Fault-tolerant-trained MARL, Both Agents Target (restrict mode)" class="graph-image">
-  <figcaption>Fault-tolerant-trained MARL — Both Agents Target (restrict mode) — evaluation trajectory under transient actuator degradation (fault onset randomized between steps 40-60), seed 0 of the 8-seed sweep.</figcaption>
+  <figcaption>Fault-tolerant-trained MARL - Both Agents Target (restrict mode) - evaluation trajectory under transient actuator degradation (fault onset randomized between steps 40-60), seed 0 of the 8-seed sweep.</figcaption>
 </figure>
 
 <h4>Sorting Agent Target (slip mode)</h4>
 <figure class="graph-container">
   <img src="assets/actuator-degradation-transient-fault-tolerant-slip-sort.svg" alt="Actuator degradation transient fault, Fault-tolerant-trained MARL, Sorting Agent Target (slip mode)" class="graph-image">
-  <figcaption>Fault-tolerant-trained MARL — Sorting Agent Target (slip mode) — evaluation trajectory under transient actuator degradation (fault onset randomized between steps 40-60), seed 0 of the 8-seed sweep.</figcaption>
+  <figcaption>Fault-tolerant-trained MARL - Sorting Agent Target (slip mode) - evaluation trajectory under transient actuator degradation (fault onset randomized between steps 40-60), seed 0 of the 8-seed sweep.</figcaption>
 </figure>
 
 <h4>Pressing Agent Target (slip mode)</h4>
 <figure class="graph-container">
   <img src="assets/actuator-degradation-transient-fault-tolerant-slip-press.svg" alt="Actuator degradation transient fault, Fault-tolerant-trained MARL, Pressing Agent Target (slip mode)" class="graph-image">
-  <figcaption>Fault-tolerant-trained MARL — Pressing Agent Target (slip mode) — evaluation trajectory under transient actuator degradation (fault onset randomized between steps 40-60), seed 0 of the 8-seed sweep.</figcaption>
+  <figcaption>Fault-tolerant-trained MARL - Pressing Agent Target (slip mode) - evaluation trajectory under transient actuator degradation (fault onset randomized between steps 40-60), seed 0 of the 8-seed sweep.</figcaption>
 </figure>
 
 <h4>Both Agents Target (slip mode)</h4>
 <figure class="graph-container">
   <img src="assets/actuator-degradation-transient-fault-tolerant-slip-both.svg" alt="Actuator degradation transient fault, Fault-tolerant-trained MARL, Both Agents Target (slip mode)" class="graph-image">
-  <figcaption>Fault-tolerant-trained MARL — Both Agents Target (slip mode) — evaluation trajectory under transient actuator degradation (fault onset randomized between steps 40-60), seed 0 of the 8-seed sweep.</figcaption>
+  <figcaption>Fault-tolerant-trained MARL - Both Agents Target (slip mode) - evaluation trajectory under transient actuator degradation (fault onset randomized between steps 40-60), seed 0 of the 8-seed sweep.</figcaption>
 </figure>
 
 <h4>Sorting Agent Target (stuck mode)</h4>
 <figure class="graph-container">
   <img src="assets/actuator-degradation-transient-fault-tolerant-stuck-sort.svg" alt="Actuator degradation transient fault, Fault-tolerant-trained MARL, Sorting Agent Target (stuck mode)" class="graph-image">
-  <figcaption>Fault-tolerant-trained MARL — Sorting Agent Target (stuck mode) — evaluation trajectory under transient actuator degradation (fault onset randomized between steps 40-60), seed 0 of the 8-seed sweep.</figcaption>
+  <figcaption>Fault-tolerant-trained MARL - Sorting Agent Target (stuck mode) - evaluation trajectory under transient actuator degradation (fault onset randomized between steps 40-60), seed 0 of the 8-seed sweep.</figcaption>
 </figure>
 
 <h4>Pressing Agent Target (stuck mode)</h4>
 <figure class="graph-container">
   <img src="assets/actuator-degradation-transient-fault-tolerant-stuck-press.svg" alt="Actuator degradation transient fault, Fault-tolerant-trained MARL, Pressing Agent Target (stuck mode)" class="graph-image">
-  <figcaption>Fault-tolerant-trained MARL — Pressing Agent Target (stuck mode) — evaluation trajectory under transient actuator degradation (fault onset randomized between steps 40-60), seed 0 of the 8-seed sweep.</figcaption>
+  <figcaption>Fault-tolerant-trained MARL - Pressing Agent Target (stuck mode) - evaluation trajectory under transient actuator degradation (fault onset randomized between steps 40-60), seed 0 of the 8-seed sweep.</figcaption>
 </figure>
 
 <h4>Both Agents Target (stuck mode)</h4>
 <figure class="graph-container">
   <img src="assets/actuator-degradation-transient-fault-tolerant-stuck-both.svg" alt="Actuator degradation transient fault, Fault-tolerant-trained MARL, Both Agents Target (stuck mode)" class="graph-image">
-  <figcaption>Fault-tolerant-trained MARL — Both Agents Target (stuck mode) — evaluation trajectory under transient actuator degradation (fault onset randomized between steps 40-60), seed 0 of the 8-seed sweep.</figcaption>
+  <figcaption>Fault-tolerant-trained MARL - Both Agents Target (stuck mode) - evaluation trajectory under transient actuator degradation (fault onset randomized between steps 40-60), seed 0 of the 8-seed sweep.</figcaption>
 </figure>
 
 <h2>Notes</h2>

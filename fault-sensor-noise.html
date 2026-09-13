@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Sensor noise — FaultBench-Industrial Research</title>
+<title>Sensor noise - FaultBench-Industrial Research</title>
 <link rel="stylesheet" href="assets/wiki.css">
 <script src="assets/wiki.js"></script>
 </head>
@@ -153,55 +153,55 @@
     <span>Experimental record</span>
   </div>
   <div class="article-kicker">Fault injection</div><h1>Sensor noise</h1><p class="lede">Corrupt observations</p><h2>Injection definition</h2>
-<p>Sensor noise introduces stochastic or deterministic corruptions (such as Gaussian noise, biased offsets, or zero-out corruptions) directly into the local observation vectors of targeted agents. During injection onset (randomized between environment steps 40–60), the agent receives miscalibrated sensory feedback about belt composition, sorting purity, and container fill states while the physical environment continues to operate normally. This tests how effectively agents can maintain optimal control under distorted observation perception.</p>
+<p>Sensor noise introduces stochastic or deterministic corruptions (such as Gaussian noise, biased offsets, or zero-out corruptions) directly into the local observation vectors of targeted agents. During injection onset (randomized between environment steps 40-60), the agent receives miscalibrated sensory feedback about belt composition, sorting purity, and container fill states while the physical environment continues to operate normally. This tests how effectively agents can maintain optimal control under distorted observation perception.</p>
 <h2>Experimental trajectory graphs</h2>
 
-<h3>Permanent fault mode — Both Agents Target (std = 0.1)</h3>
+<h3>Permanent fault mode - Both Agents Target (std = 0.1)</h3>
 <figure class="graph-container">
   <img src="assets/sensor-noise-graph.png" alt="Permanent sensor noise fault trajectory graph (Both Agents Target)" class="graph-image">
   <figcaption>Permanent sensor noise fault trajectory (Both Agents Target, std=0.1) showing the active fault window (onset at step 40, persisting through step 200). Cumulative reward degradation: 5.83.</figcaption>
 </figure>
 
-<h3>Permanent fault mode — Sorting Agent Target (std = 0.1)</h3>
+<h3>Permanent fault mode - Sorting Agent Target (std = 0.1)</h3>
 <figure class="graph-container">
   <img src="assets/sensor-noise-permanent-none-sort.png" alt="Permanent sensor noise fault trajectory graph (Sorting Agent Target)" class="graph-image">
   <figcaption>Permanent sensor noise fault trajectory targeting the sorting agent (std=0.1). Final cumulative reward: 108.61.</figcaption>
 </figure>
 
-<h3>Permanent fault mode — Pressing Agent Target (std = 0.1)</h3>
+<h3>Permanent fault mode - Pressing Agent Target (std = 0.1)</h3>
 <figure class="graph-container">
   <img src="assets/sensor-noise-permanent-none-press.png" alt="Permanent sensor noise fault trajectory graph (Pressing Agent Target)" class="graph-image">
   <figcaption>Permanent sensor noise fault trajectory targeting the pressing agent (std=0.1). Final cumulative reward: 53.57.</figcaption>
 </figure>
 
-<h3>Permanent fault mode — Both Agents Target (High Noise, std = 0.2)</h3>
+<h3>Permanent fault mode - Both Agents Target (High Noise, std = 0.2)</h3>
 <figure class="graph-container">
   <img src="assets/sensor-noise-permanent-none-highnoise.png" alt="Permanent sensor noise fault trajectory graph (High Noise std=0.2)" class="graph-image">
   <figcaption>Permanent sensor noise fault trajectory under severe noise (Both Agents Target, std=0.2). Final cumulative reward: 25.05.</figcaption>
 </figure>
 
-<h3>Transient fault mode — Both Agents Target (std = 0.1, timesteps 40–60)</h3>
+<h3>Transient fault mode - Both Agents Target (std = 0.1, timesteps 40-60)</h3>
 <figure class="graph-container">
   <img src="assets/sensor-noise-transient-fault.png" alt="Transient sensor noise fault trajectory graph (Both Agents Target)" class="graph-image">
-  <figcaption>Transient sensor noise fault trajectory (Both Agents Target, std=0.1) active between steps 40–60. Final cumulative reward: 71.75.</figcaption>
+  <figcaption>Transient sensor noise fault trajectory (Both Agents Target, std=0.1) active between steps 40-60. Final cumulative reward: 71.75.</figcaption>
 </figure>
 
-<h3>Transient fault mode — Sorting Agent Target (std = 0.1, timesteps 40–60)</h3>
+<h3>Transient fault mode - Sorting Agent Target (std = 0.1, timesteps 40-60)</h3>
 <figure class="graph-container">
   <img src="assets/sensor-noise-transient-none-sort.png" alt="Transient sensor noise fault trajectory graph (Sorting Agent Target)" class="graph-image">
-  <figcaption>Transient sensor noise fault trajectory targeting the sorting agent (std=0.1, steps 40–60). Final cumulative reward: 97.06.</figcaption>
+  <figcaption>Transient sensor noise fault trajectory targeting the sorting agent (std=0.1, steps 40-60). Final cumulative reward: 97.06.</figcaption>
 </figure>
 
-<h3>Transient fault mode — Pressing Agent Target (std = 0.1, timesteps 40–60)</h3>
+<h3>Transient fault mode - Pressing Agent Target (std = 0.1, timesteps 40-60)</h3>
 <figure class="graph-container">
   <img src="assets/sensor-noise-transient-none-press.png" alt="Transient sensor noise fault trajectory graph (Pressing Agent Target)" class="graph-image">
-  <figcaption>Transient sensor noise fault trajectory targeting the pressing agent (std=0.1, steps 40–60). Final cumulative reward: 107.65.</figcaption>
+  <figcaption>Transient sensor noise fault trajectory targeting the pressing agent (std=0.1, steps 40-60). Final cumulative reward: 107.65.</figcaption>
 </figure>
 
-<h3>Transient fault mode — Both Agents Target (High Noise, std = 0.2, timesteps 40–60)</h3>
+<h3>Transient fault mode - Both Agents Target (High Noise, std = 0.2, timesteps 40-60)</h3>
 <figure class="graph-container">
   <img src="assets/sensor-noise-transient-none-highnoise.png" alt="Transient sensor noise fault trajectory graph (High Noise std=0.2)" class="graph-image">
-  <figcaption>Transient sensor noise fault trajectory under severe noise (Both Agents Target, std=0.2, steps 40–60). Final cumulative reward: 65.87.</figcaption>
+  <figcaption>Transient sensor noise fault trajectory under severe noise (Both Agents Target, std=0.2, steps 40-60). Final cumulative reward: 65.87.</figcaption>
 </figure>
 <h2>Duration modes</h2><ul><li><a href="sensor-noise-permanent-rule-based-reconfiguration.html">Permanent</a>: the fault persists for the relevant evaluation.</li><li><a href="sensor-noise-transient-rule-based-reconfiguration.html">Transient</a>: the fault is introduced for a bounded interval.</li></ul>
 <h2>Recovery mechanisms</h2><ul><li><a href="sensor-noise-permanent-rule-based-reconfiguration.html">Rule-based reconfiguration</a></li><li><a href="sensor-noise-permanent-fault-tolerant-trained-marl.html">Fault-tolerant-trained MARL</a></li><li><a href="sensor-noise-permanent-hierarchical-supervisor-agent.html">Hierarchical supervisor-agent</a></li><li><a href="sensor-noise-permanent-llm-agent-replanning.html">LLM-agent replanning</a></li></ul>

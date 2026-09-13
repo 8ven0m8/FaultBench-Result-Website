@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Sensor noise — Permanent — Hierarchical supervisor-agent — FaultBench-Industrial Research</title>
+<title>Sensor noise - Permanent - Hierarchical supervisor-agent - FaultBench-Industrial Research</title>
 <link rel="stylesheet" href="assets/wiki.css">
 <script src="assets/wiki.js"></script>
 </head>
@@ -156,31 +156,32 @@
 <b>Duration:</b> Permanent<br>
 <b>Recovery mechanism:</b> Hierarchical supervisor-agent</div>
 <h2>Experiment definition</h2>
-<p>The experiment evaluates <b>Hierarchical supervisor-agent</b> under a <b>permanent</b> sensor noise injection. Fault onset is randomized around environment steps 40–60 according to the implementation plan.</p>
+<p>The experiment evaluates <b>Hierarchical supervisor-agent</b> under a <b>permanent</b> sensor noise injection. Fault onset is randomized around environment steps 40-60 according to the implementation plan.</p>
 <h2>Expected evaluation record</h2>
 <table><tr><th>Metric</th><th>Recorded value</th></tr>
-<tr><td>Time-to-recovery</td><td>—</td></tr>
-<tr><td>Degradation-area</td><td>—</td></tr>
-<tr><td>False-recovery rate</td><td>—</td></tr>
-<tr><td>Safety-violation count</td><td>—</td></tr></table>
+<tr><td>Time-to-recovery</td><td>92.6 steps (mean, n=7 recovered non-null of 24)</td></tr>
+<tr><td>Degradation-area</td><td>33.31 (corrected; mean, n=24)</td></tr>
+<tr><td>False-recovery rate</td><td>0.248 (mean, n=24 runs)</td></tr>
+<tr><td>Safety-violation count</td><td>75.9 (mean raw count: catastrophic+severe+near-miss, n=24)</td></tr></table>
+<p><em>Values are means across every target &times; duration-fixed combination shown on this page (see graphs below), 8 seeds each. See the <a href="results.html">Results</a> page for confidence intervals and the cross-mechanism comparison.</em></p>
 <h2>Experimental trajectory graphs</h2>
 <p>One representative seed (seed 0 of 8) per target combination from the full sweep. See the <a href="results.html">Results</a> page for the multi-seed aggregate comparison across mechanisms.</p>
 <h4>Sorting Agent Target</h4>
 <figure class="graph-container">
   <img src="assets/sensor-noise-permanent-supervisor-sort.svg" alt="Sensor noise permanent fault, Hierarchical supervisor-agent, Sorting Agent Target" class="graph-image">
-  <figcaption>Hierarchical supervisor-agent — Sorting Agent Target — evaluation trajectory under permanent sensor noise (fault onset randomized between steps 40-60), seed 0 of the 8-seed sweep.</figcaption>
+  <figcaption>Hierarchical supervisor-agent - Sorting Agent Target - evaluation trajectory under permanent sensor noise (fault onset randomized between steps 40-60), seed 0 of the 8-seed sweep.</figcaption>
 </figure>
 
 <h4>Pressing Agent Target</h4>
 <figure class="graph-container">
   <img src="assets/sensor-noise-permanent-supervisor-press.svg" alt="Sensor noise permanent fault, Hierarchical supervisor-agent, Pressing Agent Target" class="graph-image">
-  <figcaption>Hierarchical supervisor-agent — Pressing Agent Target — evaluation trajectory under permanent sensor noise (fault onset randomized between steps 40-60), seed 0 of the 8-seed sweep.</figcaption>
+  <figcaption>Hierarchical supervisor-agent - Pressing Agent Target - evaluation trajectory under permanent sensor noise (fault onset randomized between steps 40-60), seed 0 of the 8-seed sweep.</figcaption>
 </figure>
 
 <h4>Both Agents Target</h4>
 <figure class="graph-container">
   <img src="assets/sensor-noise-permanent-supervisor-both.svg" alt="Sensor noise permanent fault, Hierarchical supervisor-agent, Both Agents Target" class="graph-image">
-  <figcaption>Hierarchical supervisor-agent — Both Agents Target — evaluation trajectory under permanent sensor noise (fault onset randomized between steps 40-60), seed 0 of the 8-seed sweep.</figcaption>
+  <figcaption>Hierarchical supervisor-agent - Both Agents Target - evaluation trajectory under permanent sensor noise (fault onset randomized between steps 40-60), seed 0 of the 8-seed sweep.</figcaption>
 </figure>
 
 <h2>Notes</h2>
