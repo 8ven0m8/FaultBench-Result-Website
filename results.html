@@ -223,6 +223,16 @@
 </figure>
 <p><strong>Findings.</strong> For a fault this mild, target matters more than recovery mechanism: every arm looks close to perfect on target=sort, and the real separation only appears on target=press/both, where supervisor is the weakest performer on both degradation-area and safety-excess despite having the best recall of the three detectors. rule_based_detect and llm_replanning trade a lower false-positive rate for lower recall than supervisor.</p>
 
+<h3>Effect size vs. no recovery (Glass's &Delta;)</h3>
+<table class="metric-table"><tr><th>Recovery mechanism</th><th>&Delta; degradation-area</th><th>&Delta; safety-excess</th><th>&Delta; fraction-healthy</th><th>&Delta; relapse-count</th></tr>
+<tr><td data-label="Recovery mechanism"><code>rule_based</code></td><td data-label="Δ degradation-area">-0.330</td><td data-label="Δ safety-excess">-0.336</td><td data-label="Δ fraction-healthy">+0.357</td><td data-label="Δ relapse-count">-0.371</td></tr>
+<tr><td data-label="Recovery mechanism"><code>rule_based_detect</code></td><td data-label="Δ degradation-area">-0.184</td><td data-label="Δ safety-excess">-0.141</td><td data-label="Δ fraction-healthy">-0.232</td><td data-label="Δ relapse-count">-0.083</td></tr>
+<tr><td data-label="Recovery mechanism"><code>supervisor</code></td><td data-label="Δ degradation-area">+0.123</td><td data-label="Δ safety-excess">+0.133</td><td data-label="Δ fraction-healthy">-0.102</td><td data-label="Δ relapse-count">-0.165</td></tr>
+<tr><td data-label="Recovery mechanism"><code>fault_tolerant_marl</code></td><td data-label="Δ degradation-area">-0.084</td><td data-label="Δ safety-excess">-0.248</td><td data-label="Δ fraction-healthy">-0.462</td><td data-label="Δ relapse-count">+0.784</td></tr>
+<tr><td data-label="Recovery mechanism"><code>llm_replanning</code></td><td data-label="Δ degradation-area">-0.136</td><td data-label="Δ safety-excess">-0.163</td><td data-label="Δ fraction-healthy">+0.018</td><td data-label="Δ relapse-count">-0.083</td></tr>
+</table>
+<p><em>Glass's &Delta; = (mechanism mean - <code>none</code> mean) / <code>none</code>'s own standard deviation, pooled across every target &times; duration combo for this fault (n=48 runs per arm). Negative is an improvement for degradation-area, safety-excess, and relapse-count; positive is an improvement for fraction-healthy. Conventional magnitude bands (Cohen, 1988): |&Delta;| &asymp; 0.2 small, 0.5 medium, 0.8 large - not a significance test, read alongside n.</em></p>
+
 <h2 id="actuator-degradation">Actuator degradation</h2>
 <p>Motor/actuator attenuation in one of three modes (stuck, restrict, slip), pooled across modes in the charts below. Null-result rates are lower here (12-33%) than sensor noise - a more consistently measurable fault.</p>
 
@@ -253,6 +263,16 @@
   <img src="assets/results-actuator-degradation-intervention-recall.png" alt="Intervention recall by target and duration, actuator degradation, detector-based mechanisms" class="graph-image">
 </figure>
 <p><strong>Findings.</strong> Every self-detecting or oracle mechanism beats both none and fault_tolerant_marl by a wide margin on safety; fault_tolerant_marl tracks none almost exactly on both headline metrics, meaning the fault-tolerant training did not measurably help against this fault class in aggregate (see cross-fault conclusions for why).</p>
+
+<h3>Effect size vs. no recovery (Glass's &Delta;)</h3>
+<table class="metric-table"><tr><th>Recovery mechanism</th><th>&Delta; degradation-area</th><th>&Delta; safety-excess</th><th>&Delta; fraction-healthy</th><th>&Delta; relapse-count</th></tr>
+<tr><td data-label="Recovery mechanism"><code>rule_based</code></td><td data-label="Δ degradation-area">-0.659</td><td data-label="Δ safety-excess">-0.555</td><td data-label="Δ fraction-healthy">+0.667</td><td data-label="Δ relapse-count">-0.288</td></tr>
+<tr><td data-label="Recovery mechanism"><code>rule_based_detect</code></td><td data-label="Δ degradation-area">-0.583</td><td data-label="Δ safety-excess">-0.546</td><td data-label="Δ fraction-healthy">+0.407</td><td data-label="Δ relapse-count">+0.000</td></tr>
+<tr><td data-label="Recovery mechanism"><code>supervisor</code></td><td data-label="Δ degradation-area">-0.551</td><td data-label="Δ safety-excess">-0.529</td><td data-label="Δ fraction-healthy">+0.507</td><td data-label="Δ relapse-count">-0.209</td></tr>
+<tr><td data-label="Recovery mechanism"><code>fault_tolerant_marl</code></td><td data-label="Δ degradation-area">+0.020</td><td data-label="Δ safety-excess">-0.117</td><td data-label="Δ fraction-healthy">-0.291</td><td data-label="Δ relapse-count">-0.010</td></tr>
+<tr><td data-label="Recovery mechanism"><code>llm_replanning</code></td><td data-label="Δ degradation-area">-0.395</td><td data-label="Δ safety-excess">-0.485</td><td data-label="Δ fraction-healthy">+0.296</td><td data-label="Δ relapse-count">-0.040</td></tr>
+</table>
+<p><em>Glass's &Delta; = (mechanism mean - <code>none</code> mean) / <code>none</code>'s own standard deviation, pooled across every target &times; duration combo for this fault (n=144 runs per arm). Negative is an improvement for degradation-area, safety-excess, and relapse-count; positive is an improvement for fraction-healthy. Conventional magnitude bands (Cohen, 1988): |&Delta;| &asymp; 0.2 small, 0.5 medium, 0.8 large - not a significance test, read alongside n.</em></p>
 
 <h2 id="agent-dropout">Agent dropout</h2>
 <p>An agent's participation is completely zeroed out - one of the two most severe fault classes tested, alongside Byzantine.</p>
@@ -285,6 +305,16 @@
 </figure>
 <p><strong>Findings.</strong> This is the strongest evidence in the suite for active correction: none and fault_tolerant_marl are statistically indistinguishable from each other and both roughly 17x worse than rule_based on safety-violation excess. Every real corrective mechanism, however crude, is worth deploying against a fully-dropped agent.</p>
 
+<h3>Effect size vs. no recovery (Glass's &Delta;)</h3>
+<table class="metric-table"><tr><th>Recovery mechanism</th><th>&Delta; degradation-area</th><th>&Delta; safety-excess</th><th>&Delta; fraction-healthy</th><th>&Delta; relapse-count</th></tr>
+<tr><td data-label="Recovery mechanism"><code>rule_based</code></td><td data-label="Δ degradation-area">-0.929</td><td data-label="Δ safety-excess">-0.769</td><td data-label="Δ fraction-healthy">+0.942</td><td data-label="Δ relapse-count">-0.180</td></tr>
+<tr><td data-label="Recovery mechanism"><code>rule_based_detect</code></td><td data-label="Δ degradation-area">-0.817</td><td data-label="Δ safety-excess">-0.752</td><td data-label="Δ fraction-healthy">+0.653</td><td data-label="Δ relapse-count">-0.144</td></tr>
+<tr><td data-label="Recovery mechanism"><code>supervisor</code></td><td data-label="Δ degradation-area">-0.750</td><td data-label="Δ safety-excess">-0.728</td><td data-label="Δ fraction-healthy">+0.721</td><td data-label="Δ relapse-count">-0.251</td></tr>
+<tr><td data-label="Recovery mechanism"><code>fault_tolerant_marl</code></td><td data-label="Δ degradation-area">+0.004</td><td data-label="Δ safety-excess">+0.001</td><td data-label="Δ fraction-healthy">-0.206</td><td data-label="Δ relapse-count">+0.000</td></tr>
+<tr><td data-label="Recovery mechanism"><code>llm_replanning</code></td><td data-label="Δ degradation-area">-0.572</td><td data-label="Δ safety-excess">-0.679</td><td data-label="Δ fraction-healthy">+0.466</td><td data-label="Δ relapse-count">-0.359</td></tr>
+</table>
+<p><em>Glass's &Delta; = (mechanism mean - <code>none</code> mean) / <code>none</code>'s own standard deviation, pooled across every target &times; duration combo for this fault (n=48 runs per arm). Negative is an improvement for degradation-area, safety-excess, and relapse-count; positive is an improvement for fraction-healthy. Conventional magnitude bands (Cohen, 1988): |&Delta;| &asymp; 0.2 small, 0.5 medium, 0.8 large - not a significance test, read alongside n.</em></p>
+
 <h2 id="communication-loss">Communication loss</h2>
 <p>Inter-agent messaging is dropped or staled; only the press channel is affected by construction, so every chart below has a single target row. The one fault class where fault_tolerant_marl outright wins rather than tying none.</p>
 
@@ -316,6 +346,16 @@
 </figure>
 <p><strong>Findings.</strong> This fault only degrades the press channel's forward-looking signal about the sort stage - the press agent's own local sensing stays accurate - making it the mildest, most partial-information fault in the suite. That is consistent with fault_tolerant_marl's domain-randomized training transferring well here while it does not for the near-total failures (agent dropout, Byzantine): the degradation is small enough that a policy trained for general robustness has an easier job than a policy trying to substitute for a fully broken or adversarial teammate. It is also the one fault class where an active mechanism (supervisor) is clearly worse than doing nothing on both headline metrics - see cross-fault conclusions.</p>
 
+<h3>Effect size vs. no recovery (Glass's &Delta;)</h3>
+<table class="metric-table"><tr><th>Recovery mechanism</th><th>&Delta; degradation-area</th><th>&Delta; safety-excess</th><th>&Delta; fraction-healthy</th><th>&Delta; relapse-count</th></tr>
+<tr><td data-label="Recovery mechanism"><code>rule_based</code></td><td data-label="Δ degradation-area">-0.128</td><td data-label="Δ safety-excess">-0.092</td><td data-label="Δ fraction-healthy">+0.123</td><td data-label="Δ relapse-count">-0.194</td></tr>
+<tr><td data-label="Recovery mechanism"><code>rule_based_detect</code></td><td data-label="Δ degradation-area">-0.387</td><td data-label="Δ safety-excess">-0.374</td><td data-label="Δ fraction-healthy">+0.142</td><td data-label="Δ relapse-count">+0.194</td></tr>
+<tr><td data-label="Recovery mechanism"><code>supervisor</code></td><td data-label="Δ degradation-area">+0.047</td><td data-label="Δ safety-excess">+0.018</td><td data-label="Δ fraction-healthy">-0.058</td><td data-label="Δ relapse-count">+0.000</td></tr>
+<tr><td data-label="Recovery mechanism"><code>fault_tolerant_marl</code></td><td data-label="Δ degradation-area">-0.475</td><td data-label="Δ safety-excess">-0.550</td><td data-label="Δ fraction-healthy">+0.069</td><td data-label="Δ relapse-count">+1.878</td></tr>
+<tr><td data-label="Recovery mechanism"><code>llm_replanning</code></td><td data-label="Δ degradation-area">+0.003</td><td data-label="Δ safety-excess">+0.006</td><td data-label="Δ fraction-healthy">-0.089</td><td data-label="Δ relapse-count">-0.065</td></tr>
+</table>
+<p><em>Glass's &Delta; = (mechanism mean - <code>none</code> mean) / <code>none</code>'s own standard deviation, pooled across every target &times; duration combo for this fault (n=32 runs per arm). Negative is an improvement for degradation-area, safety-excess, and relapse-count; positive is an improvement for fraction-healthy. Conventional magnitude bands (Cohen, 1988): |&Delta;| &asymp; 0.2 small, 0.5 medium, 0.8 large - not a significance test, read alongside n.</em></p>
+
 <h2 id="byzantine">Byzantine / adversarial agents</h2>
 <p>A cooperative agent's policy is replaced with an adversarial one, in one of three modes (fixed-malicious, worst-action, random-malicious), pooled across modes below.</p>
 
@@ -346,6 +386,16 @@
   <img src="assets/results-byzantine-adversarial-intervention-recall.png" alt="Intervention recall by target and duration, Byzantine adversarial agents, detector-based mechanisms" class="graph-image">
 </figure>
 <p><strong>Findings.</strong> Same shape as agent dropout: none and fault_tolerant_marl are tied at the bottom, every corrective mechanism is a large, clear improvement on safety, and rule_based_detect (30.2) clearly outperforms supervisor (41.3) and llm_replanning (50.4) here specifically - unlike sensor noise, where supervisor's higher recall paid off, an adversarial agent appears harder for the learned supervisor policy to characterize than a self-detected reward drop.</p>
+
+<h3>Effect size vs. no recovery (Glass's &Delta;)</h3>
+<table class="metric-table"><tr><th>Recovery mechanism</th><th>&Delta; degradation-area</th><th>&Delta; safety-excess</th><th>&Delta; fraction-healthy</th><th>&Delta; relapse-count</th></tr>
+<tr><td data-label="Recovery mechanism"><code>rule_based</code></td><td data-label="Δ degradation-area">-0.979</td><td data-label="Δ safety-excess">-0.717</td><td data-label="Δ fraction-healthy">+1.135</td><td data-label="Δ relapse-count">-0.089</td></tr>
+<tr><td data-label="Recovery mechanism"><code>rule_based_detect</code></td><td data-label="Δ degradation-area">-0.649</td><td data-label="Δ safety-excess">-0.632</td><td data-label="Δ fraction-healthy">+0.483</td><td data-label="Δ relapse-count">+0.100</td></tr>
+<tr><td data-label="Recovery mechanism"><code>supervisor</code></td><td data-label="Δ degradation-area">-0.450</td><td data-label="Δ safety-excess">-0.517</td><td data-label="Δ fraction-healthy">+0.524</td><td data-label="Δ relapse-count">-0.066</td></tr>
+<tr><td data-label="Recovery mechanism"><code>fault_tolerant_marl</code></td><td data-label="Δ degradation-area">+0.013</td><td data-label="Δ safety-excess">+0.002</td><td data-label="Δ fraction-healthy">-0.137</td><td data-label="Δ relapse-count">+0.133</td></tr>
+<tr><td data-label="Recovery mechanism"><code>llm_replanning</code></td><td data-label="Δ degradation-area">-0.287</td><td data-label="Δ safety-excess">-0.395</td><td data-label="Δ fraction-healthy">+0.259</td><td data-label="Δ relapse-count">-0.022</td></tr>
+</table>
+<p><em>Glass's &Delta; = (mechanism mean - <code>none</code> mean) / <code>none</code>'s own standard deviation, pooled across every target &times; duration combo for this fault (n=144 runs per arm). Negative is an improvement for degradation-area, safety-excess, and relapse-count; positive is an improvement for fraction-healthy. Conventional magnitude bands (Cohen, 1988): |&Delta;| &asymp; 0.2 small, 0.5 medium, 0.8 large - not a significance test, read alongside n.</em></p>
 
 <h2 id="conclusions">Cross-fault conclusions</h2>
 

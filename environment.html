@@ -153,9 +153,22 @@
     <span>Experimental record</span>
   </div>
   <div class="article-kicker">Research</div><h1>Base environment</h1>
-<p>The research proposal identifies an industrial-flavored MARL benchmark as the intended base environment. The initial candidate is the SortingEnv + ContainerGym recycling benchmark.</p>
-<h2>Role in the benchmark</h2><p>The environment remains constant while the fault injector and recovery mechanism are varied. This isolates recovery behavior as the main experimental factor.</p>
-<h2>Implementation boundary</h2><p>The fault-injection layer should sit around the environment's step interface so observations, actions, communication, agent participation, and policy behavior can be altered in controlled experiments.</p>
+<p>FaultBench-Industrial does not build its own industrial simulation from scratch. The multi-agent sorting/pressing environment - the thing that actually gets faulted and recovered from throughout this whole site - is taken from an existing open-source benchmark, extended with a fault-injection layer and the four recovery mechanisms documented elsewhere on this site.</p>
+
+<h2>Credit and provenance</h2>
+<div class="notice">
+  <p><strong>Environment code:</strong> <a href="https://github.com/Storm-131/MARL-SortingEnv" target="_blank" rel="noopener">Storm-131/MARL-SortingEnv</a> (MIT licensed).</p>
+  <p><strong>Paper:</strong> Maus, T., Atamna, A., &amp; Glasmachers, T. (2025). <em>Balancing Specialization and Centralization: A Multi-Agent Reinforcement Learning Benchmark for Sequential Industrial Control.</em> <a href="https://arxiv.org/abs/2510.20408" target="_blank" rel="noopener">arXiv:2510.20408</a>.</p>
+</div>
+<p>All credit for the base simulation, its physics/logic, and the modular-vs-monolithic research question it was originally built to study belongs to that repository and paper. FaultBench-Industrial's own contribution starts at the fault-injection layer and the recovery mechanisms built on top of it.</p>
+
+<h2>What the source work actually built and found</h2>
+<p>Maus, Atamna, and Glasmachers built their benchmark by combining two existing environments - SortingEnv and ContainerGym - into a single simulated recycling line with three stages: an <strong>input generator</strong>, a <strong>sorting machine</strong>, and a <strong>container &amp; pressing station</strong>. The task is sequential and coupled: material has to be sorted correctly before it reaches the press, and the press has its own capacity/safety constraints, so a policy has to reason about both stages rather than optimizing either one in isolation.</p>
+<p>Their research question was about <strong>control architecture</strong>, not fault tolerance: does it work better to have one specialized agent per subsystem (a modular architecture - one agent for sorting, one for pressing) or a single monolithic agent controlling the entire process end-to-end? They found that without action masking, the modular architecture clearly wins - a single agent trying to learn both jobs at once struggles with the combined action space. With action masking applied to both architectures, however, both improve substantially and the performance gap narrows considerably, since masking out invalid actions removes most of the exploration burden that specialization was implicitly solving. Their headline takeaway is that the value of specialization is largely a function of how much of the hard work action-space constraints are already doing for you.</p>
+<p>This is exactly why the modular (sort-agent + press-agent) variant of their environment was the right fit here: FaultBench-Industrial's recovery mechanisms are evaluated per-channel (<code>target = sort / press / both</code>, referenced throughout the fault and recovery pages on this site), which presupposes the same two-agent decomposition their modular architecture uses. The fault-injection layer added for this project - sensor noise, actuator degradation, agent dropout, communication loss, and Byzantine/adversarial agents - sits around that same sort/press agent pair and its shared environment step, rather than requiring a different base environment.</p>
+
+<h2>Role in this benchmark</h2>
+<p>The environment itself - its dynamics, reward structure, and action space - is held fixed throughout every experiment on this site. Only the fault injector and the recovery mechanism are varied. That is what makes the fault-mechanism comparisons on the <a href="results.html">results page</a> apples-to-apples: any difference in outcome is attributable to the recovery mechanism, not to a changing environment underneath it.</p>
   <footer class="footer">
     <p>This site documents the experimental work associated with the FaultBench-Industrial research project.</p>
     <p>Last updated: August 2026</p>
