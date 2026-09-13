@@ -54,7 +54,7 @@ a:hover { text-decoration: underline; }
   padding: 0 22px;
   background: var(--bg);
 }
-.menu-button, .theme-button {
+.menu-button, .theme-button, .icon-link {
   border: 1px solid var(--soft-border);
   background: var(--surface);
   color: var(--text);
@@ -73,7 +73,7 @@ a:hover { text-decoration: underline; }
   height: 18px;
   display: block;
 }
-.theme-button svg {
+.theme-button svg, .icon-link svg {
   width: 16px;
   height: 16px;
   display: block;
@@ -96,7 +96,7 @@ html[data-theme="dark"] .theme-button .moon-icon {
   font-size: 19px;
 }
 .tagline { color: var(--muted); font-size: 13px; }
-.header-tools { margin-left: auto; }
+.header-tools { margin-left: auto; display: flex; align-items: center; gap: 8px; }
 .site-shell { display: flex; min-height: calc(100vh - 57px); }
 .sidebar {
   position: sticky;
