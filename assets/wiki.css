@@ -133,6 +133,8 @@ html[data-sidebar="hidden"] .sidebar,
 .sidebar .nested { margin-left: 11px; border-left: 1px solid var(--soft-border); }
 .nav-children { margin-left: 18px; border-left: 1px solid var(--soft-border); padding-left: 7px; }
 .nav-children a { padding: 2px 7px; }
+.sidebar a.disclaimer-link { color: var(--muted); }
+.sidebar a.disclaimer-link:hover { color: var(--text); }
 .nav-children a.active { background: var(--active); font-weight: 600; }
 .content { width: 100%; max-width: 1180px; padding: 16px 38px 48px; }
 .page-tools {
