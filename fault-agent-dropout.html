@@ -159,7 +159,7 @@
     <span>Experimental record</span>
   </div>
   <div class="article-kicker">Fault injection</div><h1>Agent dropout</h1><p class="lede">Zero out an agent&#x27;s participation entirely</p><h2>Injection definition</h2>
-<p>Agent dropout models complete hardware node crashes, power outages, or physical failures by instantly zeroing out a target agent's participation in the multi-agent system (randomized onset between steps 40-60). The failed agent stops publishing state updates, issuing control actions, or responding to coordination signals. Surrounding agents must dynamically detect the missing node and redistribute workload across remaining functional units without causing system overflow or deadlock.</p>
+<p>Agent dropout models complete hardware node crashes, power outages, or physical failures by instantly zeroing out a target agent's participation in the multi-agent system (randomized onset between steps 40-60). The failed agent's policy is no longer consulted at all; a fixed failsafe action is applied in its place every step (sort mode 0 for the sorter, a no-op for the press). The remaining agent keeps running its own policy, and the system has to avoid overflow without the dropped agent's decisions.</p>
 <h2>Experimental trajectory graphs</h2>
 
 <h3>Permanent fault mode</h3>
@@ -176,7 +176,7 @@
   <figcaption>Agent dropout, permanent fault mode, pressing agent target - evaluation trajectory with no recovery mechanism active (fault onset randomized between steps 40-60), seed 0 of the 8-seed sweep.</figcaption>
 </figure>
 
-<h3>Transient fault mode (40-60 timesteps)</h3>
+<h3>Transient fault mode (20 steps, onset between steps 40-60)</h3>
 <figure class="graph-container">
   <img src="assets/agent-dropout-transient-none-both.svg" alt="Agent dropout transient fault trajectory graph (Both Agents Target)" class="graph-image">
   <figcaption>Agent dropout, transient fault mode, both agents target - evaluation trajectory with no recovery mechanism active (fault onset randomized between steps 40-60), seed 0 of the 8-seed sweep.</figcaption>
@@ -189,11 +189,11 @@
   <img src="assets/agent-dropout-transient-none-press.svg" alt="Agent dropout transient fault trajectory graph (Pressing Agent Target)" class="graph-image">
   <figcaption>Agent dropout, transient fault mode, pressing agent target - evaluation trajectory with no recovery mechanism active (fault onset randomized between steps 40-60), seed 0 of the 8-seed sweep.</figcaption>
 </figure>
-<h2>Duration modes</h2><ul><li><a href="agent-dropout-permanent-rule-based-reconfiguration.html">Permanent</a>: the fault persists for the relevant evaluation.</li><li><a href="agent-dropout-transient-rule-based-reconfiguration.html">Transient</a>: the fault is introduced for a bounded interval.</li></ul>
+<h2>Duration modes</h2><ul><li><a href="agent-dropout-permanent-rule-based-reconfiguration.html">Permanent</a>: the fault persists until the end of the episode.</li><li><a href="agent-dropout-transient-rule-based-reconfiguration.html">Transient</a>: the fault lasts 20 steps.</li></ul>
 <h2>Recovery mechanisms</h2><ul><li><a href="agent-dropout-permanent-rule-based-reconfiguration.html">Rule-based reconfiguration</a></li><li><a href="agent-dropout-permanent-fault-tolerant-trained-marl.html">Fault-tolerant-trained MARL</a></li><li><a href="agent-dropout-permanent-hierarchical-supervisor-agent.html">Hierarchical supervisor-agent</a></li><li><a href="agent-dropout-permanent-llm-agent-replanning.html">LLM-agent replanning</a></li></ul>
   <footer class="footer">
     <p>This site documents the experimental work associated with the FaultBench-Industrial research project.</p>
-    <p>Last updated: August 2026</p>
+    <p>Last updated: October 2026</p>
   </footer>
 </main>
 </div>

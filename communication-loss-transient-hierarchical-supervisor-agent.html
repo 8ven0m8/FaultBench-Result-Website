@@ -162,33 +162,35 @@
 <b>Duration:</b> Transient<br>
 <b>Recovery mechanism:</b> Hierarchical supervisor-agent</div>
 <h2>Experiment definition</h2>
-<p>The experiment evaluates <b>Hierarchical supervisor-agent</b> under a <b>transient</b> communication loss injection. Fault onset is randomized around environment steps 40-60 according to the implementation plan.</p>
+<p>The experiment evaluates <b>Hierarchical supervisor-agent</b> under a <b>transient</b> communication loss injection. Fault onset is randomized between environment steps 40 and 60.</p>
 <h2>Expected evaluation record</h2>
 <table><tr><th>Metric</th><th>Recorded value</th></tr>
-<tr><td>Time-to-recovery</td><td>n/a - no recovered, non-null events in this slice (n=16 total)</td></tr>
-<tr><td>Degradation-area</td><td>4.97 (corrected; mean, n=16)</td></tr>
-<tr><td>False-recovery rate</td><td>0.902 (mean, n=16 runs)</td></tr>
-<tr><td>Safety-violation count</td><td>38.7 (mean raw count: catastrophic+severe+near-miss, n=16)</td></tr></table>
-<p><em>Values are means across every target &times; duration-fixed combination shown on this page (see graphs below), 8 seeds each. See the <a href="results.html">Results</a> page for confidence intervals and the cross-mechanism comparison.</em></p>
+<tr><td>Degradation-area</td><td>3.10 &plusmn; 2.22 (corrected; mean &plusmn; 95% CI, n=48)</td></tr>
+<tr><td>Safety-violation excess</td><td>14.4 &plusmn; 10.3 (weighted, control-subtracted; mean &plusmn; 95% CI, n=48)</td></tr>
+<tr><td>Fraction of time healthy</td><td>0.706 &plusmn; 0.021 (mean &plusmn; 95% CI, n=48)</td></tr>
+<tr><td>Relapse count</td><td>0.50 &plusmn; 0.15 (mean &plusmn; 95% CI, n=48)</td></tr>
+<tr><td>False-recovery rate</td><td>0.892 &plusmn; 0.005 (mean &plusmn; 95% CI, n=48)</td></tr>
+<tr><td>Intervention recall</td><td>0.742 &plusmn; 0.039 (mean &plusmn; 95% CI, n=48)</td></tr></table>
+<p><em>Values are means with 95% confidence intervals across every target &times; duration-fixed combination shown on this page (see graphs below), 8 evaluation seeds each, for each of 3 training seeds. See the <a href="results.html">Results</a> page for the cross-mechanism comparison.</em></p>
 <h2>Experimental trajectory graphs</h2>
-<p>One representative seed (seed 0 of 8) per target × mode combination from the full sweep. See the <a href="results.html">Results</a> page for the multi-seed aggregate comparison across mechanisms.</p>
+<p>One representative run (evaluation seed 0 of 8, training seed 1 of 3) per target × mode combination from the full sweep. See the <a href="results.html">Results</a> page for the multi-seed aggregate comparison across mechanisms.</p>
 <h4>Pressing Agent Target (blackout mode)</h4>
 <figure class="graph-container">
   <img src="assets/communication-loss-transient-supervisor-blackout-press.svg" alt="Communication loss transient fault, Hierarchical supervisor-agent, Pressing Agent Target (blackout mode)" class="graph-image">
-  <figcaption>Hierarchical supervisor-agent - Pressing Agent Target (blackout mode) - evaluation trajectory under transient communication loss (fault onset randomized between steps 40-60), seed 0 of the 8-seed sweep.</figcaption>
+  <figcaption>Hierarchical supervisor-agent - Pressing Agent Target (blackout mode) - evaluation trajectory under transient communication loss (fault onset randomized between steps 40-60), seed 0 of the 8-seed sweep, training seed 1 of 3.</figcaption>
 </figure>
 
 <h4>Pressing Agent Target (stale mode)</h4>
 <figure class="graph-container">
   <img src="assets/communication-loss-transient-supervisor-stale-press.svg" alt="Communication loss transient fault, Hierarchical supervisor-agent, Pressing Agent Target (stale mode)" class="graph-image">
-  <figcaption>Hierarchical supervisor-agent - Pressing Agent Target (stale mode) - evaluation trajectory under transient communication loss (fault onset randomized between steps 40-60), seed 0 of the 8-seed sweep.</figcaption>
+  <figcaption>Hierarchical supervisor-agent - Pressing Agent Target (stale mode) - evaluation trajectory under transient communication loss (fault onset randomized between steps 40-60), seed 0 of the 8-seed sweep, training seed 1 of 3.</figcaption>
 </figure>
 
 <h2>Notes</h2>
 <p>This page is intentionally separated from the paper-facing results so that full-resolution plots, additional seeds, and diagnostic figures can be documented without overloading the publication.</p>
   <footer class="footer">
     <p>This site documents the experimental work associated with the FaultBench-Industrial research project.</p>
-    <p>Last updated: August 2026</p>
+    <p>Last updated: October 2026</p>
   </footer>
 </main>
 </div>

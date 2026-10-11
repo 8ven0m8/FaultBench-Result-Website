@@ -159,13 +159,13 @@
     <span>Experimental record</span>
   </div>
   <div class="article-kicker">Research</div><h1>Methodology</h1>
-<h2>Base system</h2><p>The planned benchmark uses an industrial-flavored multi-agent process-control environment, with the SortingEnv + ContainerGym recycling benchmark identified as the initial candidate.</p>
-<h2>Fault injection</h2><p>Faults are introduced through a wrapper around the environment's <code>step()</code> process. The injection layer is intended to be configuration-driven and reproducible.</p>
+<h2>Base system</h2><p>The benchmark uses an industrial-flavored multi-agent process-control environment: the MARL-SortingEnv recycling line, which combines SortingEnv and ContainerGym (see <a href="environment.html">Base environment</a>).</p>
+<h2>Fault injection</h2><p>Faults are introduced through a wrapper around the environment's <code>step()</code> process. The injection layer is configuration-driven and reproducible from a seed.</p>
 <h2>Recovery layer</h2><p>Four recovery mechanisms are implemented as swappable modules above the same base MARL system. This preserves the apples-to-apples comparison.</p>
-<h2>Evaluation</h2><p>Each mechanism × fault-type combination should be evaluated across multiple random seeds, with confidence intervals where feasible.</p>
+<h2>Evaluation</h2><p>Each mechanism × fault-type combination is evaluated across 8 random seeds (and 3 training seeds for the two trained mechanisms), with 95% confidence intervals.</p>
   <footer class="footer">
     <p>This site documents the experimental work associated with the FaultBench-Industrial research project.</p>
-    <p>Last updated: August 2026</p>
+    <p>Last updated: October 2026</p>
   </footer>
 </main>
 </div>

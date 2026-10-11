@@ -159,7 +159,7 @@
     <span>Experimental record</span>
   </div>
   <div class="article-kicker">Fault injection</div><h1>Byzantine / adversarial agents</h1><p class="lede">Swap an agent&#x27;s policy for an adversarial one</p><h2>Injection definition</h2>
-<p>Byzantine / adversarial injection models rogue, hacked, or severely corrupted agents by swapping a cooperative agent's policy for an adversarial one at runtime (onset between steps 40-60). The compromised node actively broadcasts misleading coordination messages or takes counter-productive physical actions (such as intentionally mis-sorting materials or triggering unnecessary presses), testing whether the multi-agent system can isolate malicious nodes and preserve safety guarantees.</p>
+<p>Byzantine / adversarial injection models rogue, hacked, or severely corrupted agents by swapping a cooperative agent's policy for an adversarial one at runtime (onset between steps 40-60). The compromised agent still perceives the system correctly and its commands are executed faithfully, but the decisions themselves are adversarial, in one of three modes: <b>fixed-malicious</b> (one harmful action chosen at onset and held), <b>worst-action</b> (a harmful action recomputed every step from the current state, e.g. boosting the less abundant material or pressing the emptiest container), or <b>random-malicious</b> (a uniformly random legal action every step). This tests whether the system can catch an agent that looks alive and plausible while preserving safety.</p>
 <h2>Experimental trajectory graphs</h2>
 
 <h3>Fixed-Malicious Mode - Permanent Duration</h3>
@@ -176,7 +176,7 @@
   <figcaption>Fixed-Malicious Mode - Pressing Agent Target (Permanent): evaluation trajectory with no recovery mechanism active (fault onset randomized between steps 40-60), seed 0 of the 8-seed sweep.</figcaption>
 </figure>
 
-<h3>Fixed-Malicious Mode - Transient Duration (Steps 40-60)</h3>
+<h3>Fixed-Malicious Mode - Transient Duration (20 steps, onset between steps 40-60)</h3>
 <figure class="graph-container">
   <img src="assets/byzantine-adversarial-fixed-malicious-transient-both.svg" alt="Fixed-Malicious Mode transient Byzantine / adversarial fault trajectory graph (Both Agents Target)" class="graph-image">
   <figcaption>Fixed-Malicious Mode - Both Agents Target (Transient): evaluation trajectory with no recovery mechanism active (fault onset randomized between steps 40-60), seed 0 of the 8-seed sweep.</figcaption>
@@ -204,7 +204,7 @@
   <figcaption>Worst-Action Mode - Pressing Agent Target (Permanent): evaluation trajectory with no recovery mechanism active (fault onset randomized between steps 40-60), seed 0 of the 8-seed sweep.</figcaption>
 </figure>
 
-<h3>Worst-Action Mode - Transient Duration (Steps 40-60)</h3>
+<h3>Worst-Action Mode - Transient Duration (20 steps, onset between steps 40-60)</h3>
 <figure class="graph-container">
   <img src="assets/byzantine-adversarial-worst-action-transient-both.svg" alt="Worst-Action Mode transient Byzantine / adversarial fault trajectory graph (Both Agents Target)" class="graph-image">
   <figcaption>Worst-Action Mode - Both Agents Target (Transient): evaluation trajectory with no recovery mechanism active (fault onset randomized between steps 40-60), seed 0 of the 8-seed sweep.</figcaption>
@@ -232,7 +232,7 @@
   <figcaption>Random-Malicious Mode - Pressing Agent Target (Permanent): evaluation trajectory with no recovery mechanism active (fault onset randomized between steps 40-60), seed 0 of the 8-seed sweep.</figcaption>
 </figure>
 
-<h3>Random-Malicious Mode - Transient Duration (Steps 40-60)</h3>
+<h3>Random-Malicious Mode - Transient Duration (20 steps, onset between steps 40-60)</h3>
 <figure class="graph-container">
   <img src="assets/byzantine-adversarial-random-malicious-transient-both.svg" alt="Random-Malicious Mode transient Byzantine / adversarial fault trajectory graph (Both Agents Target)" class="graph-image">
   <figcaption>Random-Malicious Mode - Both Agents Target (Transient): evaluation trajectory with no recovery mechanism active (fault onset randomized between steps 40-60), seed 0 of the 8-seed sweep.</figcaption>
@@ -245,11 +245,11 @@
   <img src="assets/byzantine-adversarial-random-malicious-transient-press.svg" alt="Random-Malicious Mode transient Byzantine / adversarial fault trajectory graph (Pressing Agent Target)" class="graph-image">
   <figcaption>Random-Malicious Mode - Pressing Agent Target (Transient): evaluation trajectory with no recovery mechanism active (fault onset randomized between steps 40-60), seed 0 of the 8-seed sweep.</figcaption>
 </figure>
-<h2>Duration modes</h2><ul><li><a href="byzantine-adversarial-permanent-rule-based-reconfiguration.html">Permanent</a>: the fault persists for the relevant evaluation.</li><li><a href="byzantine-adversarial-transient-rule-based-reconfiguration.html">Transient</a>: the fault is introduced for a bounded interval.</li></ul>
+<h2>Duration modes</h2><ul><li><a href="byzantine-adversarial-permanent-rule-based-reconfiguration.html">Permanent</a>: the fault persists until the end of the episode.</li><li><a href="byzantine-adversarial-transient-rule-based-reconfiguration.html">Transient</a>: the fault lasts 20 steps.</li></ul>
 <h2>Recovery mechanisms</h2><ul><li><a href="byzantine-adversarial-permanent-rule-based-reconfiguration.html">Rule-based reconfiguration</a></li><li><a href="byzantine-adversarial-permanent-fault-tolerant-trained-marl.html">Fault-tolerant-trained MARL</a></li><li><a href="byzantine-adversarial-permanent-hierarchical-supervisor-agent.html">Hierarchical supervisor-agent</a></li><li><a href="byzantine-adversarial-permanent-llm-agent-replanning.html">LLM-agent replanning</a></li></ul>
   <footer class="footer">
     <p>This site documents the experimental work associated with the FaultBench-Industrial research project.</p>
-    <p>Last updated: August 2026</p>
+    <p>Last updated: October 2026</p>
   </footer>
 </main>
 </div>

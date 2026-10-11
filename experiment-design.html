@@ -161,13 +161,15 @@
   <div class="article-kicker">Research</div><h1>Experiment design</h1>
 <h2>Factor structure</h2>
 <table><tr><th>Factor</th><th>Levels</th></tr>
-<tr><td>Fault type</td><td>5 classes</td></tr><tr><td>Fault duration</td><td>Permanent, transient</td></tr>
-<tr><td>Recovery mechanism</td><td>4 paradigms</td></tr><tr><td>Evaluation</td><td>Multiple random seeds</td></tr></table>
-<h2>Fault timing</h2><p>The implementation plan introduces faults at a randomized point around steps 40-60.</p>
+<tr><td>Fault type</td><td>5 classes</td></tr>
+<tr><td>Fault target</td><td>Sort agent, press agent, both (communication loss: press only)</td></tr>
+<tr><td>Fault mode</td><td>1-3 per fault type (e.g. stuck, restrict, slip for actuator degradation)</td></tr><tr><td>Fault duration</td><td>Permanent, transient</td></tr>
+<tr><td>Recovery mechanism</td><td>4 paradigms, run as 6 arms: no-recovery control, rule-based (oracle), rule-based with self-detection, supervisor, fault-tolerant MARL, LLM replanning</td></tr><tr><td>Evaluation</td><td>8 random seeds per combination; 3 training seeds for the two trained mechanisms (4,160 runs in total)</td></tr></table>
+<h2>Fault timing</h2><p>Each fault starts at a random step between 40 and 60 of a 200-step episode. Transient faults last 20 steps; permanent faults last until the end of the episode.</p>
 <h2>Comparison principle</h2><p>Every recovery mechanism is evaluated against the same fault conditions and scored with the same metrics.</p>
   <footer class="footer">
     <p>This site documents the experimental work associated with the FaultBench-Industrial research project.</p>
-    <p>Last updated: August 2026</p>
+    <p>Last updated: October 2026</p>
   </footer>
 </main>
 </div>

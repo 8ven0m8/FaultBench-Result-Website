@@ -158,8 +158,8 @@
     <span>·</span>
     <span>Experimental record</span>
   </div>
-  <div class="article-kicker">Fault injection</div><h1>Communication loss</h1><p class="lede">Drop an agent&#x27;s messages to others</p><h2>Injection definition</h2>
-<p>Communication loss simulates network partitioning, packet drops, and channel disruption by dropping all outgoing and incoming messages for targeted agents (randomized onset between steps 40-60). While agents continue to perceive local observations and execute local actions, inter-agent coordination signals and global state synchronization are blocked, forcing agents to operate uncoordinated or rely on local inference.</p>
+  <div class="article-kicker">Fault injection</div><h1>Communication loss</h1><p class="lede">Cut the press agent&#x27;s view of the sorting stage</p><h2>Injection definition</h2>
+<p>The environment has no explicit message channel between agents; the only cross-agent information is the press agent's view of what the sorting stage is currently producing. Communication loss cuts that link (randomized onset between steps 40-60), in one of two modes: <b>stale</b> (the press agent keeps seeing the last value from before the link dropped) or <b>blackout</b> (the value is zeroed out). The press agent's own local sensing and the sort agent's observation are untouched, so the fault only affects the press channel.</p>
 <h2>Experimental trajectory graphs</h2>
 
 <h3>Stale Mode - Permanent Duration</h3>
@@ -168,7 +168,7 @@
   <figcaption>Stale Mode - Pressing Agent Target (Permanent): evaluation trajectory with no recovery mechanism active (communication loss only ever affects the press channel - see injection definition above), seed 0 of the 8-seed sweep.</figcaption>
 </figure>
 
-<h3>Stale Mode - Transient Duration (Steps 40-60)</h3>
+<h3>Stale Mode - Transient Duration (20 steps, onset between steps 40-60)</h3>
 <figure class="graph-container">
   <img src="assets/communication-loss-stale-transient-press.svg" alt="Stale Mode transient communication loss fault trajectory graph (Pressing Agent Target)" class="graph-image">
   <figcaption>Stale Mode - Pressing Agent Target (Transient): evaluation trajectory with no recovery mechanism active (communication loss only ever affects the press channel - see injection definition above), seed 0 of the 8-seed sweep.</figcaption>
@@ -180,16 +180,16 @@
   <figcaption>Blackout Mode - Pressing Agent Target (Permanent): evaluation trajectory with no recovery mechanism active (communication loss only ever affects the press channel - see injection definition above), seed 0 of the 8-seed sweep.</figcaption>
 </figure>
 
-<h3>Blackout Mode - Transient Duration (Steps 40-60)</h3>
+<h3>Blackout Mode - Transient Duration (20 steps, onset between steps 40-60)</h3>
 <figure class="graph-container">
   <img src="assets/communication-loss-blackout-transient-press.svg" alt="Blackout Mode transient communication loss fault trajectory graph (Pressing Agent Target)" class="graph-image">
   <figcaption>Blackout Mode - Pressing Agent Target (Transient): evaluation trajectory with no recovery mechanism active (communication loss only ever affects the press channel - see injection definition above), seed 0 of the 8-seed sweep.</figcaption>
 </figure>
-<h2>Duration modes</h2><ul><li><a href="communication-loss-permanent-rule-based-reconfiguration.html">Permanent</a>: the fault persists for the relevant evaluation.</li><li><a href="communication-loss-transient-rule-based-reconfiguration.html">Transient</a>: the fault is introduced for a bounded interval.</li></ul>
+<h2>Duration modes</h2><ul><li><a href="communication-loss-permanent-rule-based-reconfiguration.html">Permanent</a>: the fault persists until the end of the episode.</li><li><a href="communication-loss-transient-rule-based-reconfiguration.html">Transient</a>: the fault lasts 20 steps.</li></ul>
 <h2>Recovery mechanisms</h2><ul><li><a href="communication-loss-permanent-rule-based-reconfiguration.html">Rule-based reconfiguration</a></li><li><a href="communication-loss-permanent-fault-tolerant-trained-marl.html">Fault-tolerant-trained MARL</a></li><li><a href="communication-loss-permanent-hierarchical-supervisor-agent.html">Hierarchical supervisor-agent</a></li><li><a href="communication-loss-permanent-llm-agent-replanning.html">LLM-agent replanning</a></li></ul>
   <footer class="footer">
     <p>This site documents the experimental work associated with the FaultBench-Industrial research project.</p>
-    <p>Last updated: August 2026</p>
+    <p>Last updated: October 2026</p>
   </footer>
 </main>
 </div>

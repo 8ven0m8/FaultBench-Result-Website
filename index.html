@@ -165,24 +165,24 @@
 <h2 id="overview">Overview</h2>
 <p>This site is the detailed experimental record for a research project comparing four recovery-mechanism paradigms under a standardized industrial fault-injection suite. The project is framed as a controlled, apples-to-apples comparison on the same multi-agent system, with the same fault classes and the same evaluation metrics.</p>
 <h2 id="research-question">Research question</h2>
-<p>Under a standardized industrial fault-injection suite covering sensor noise, actuator degradation, agent dropout, communication loss, and Byzantine/adversarial agents, how do reactive rule-based reconfiguration, fault-tolerant-trained MARL, hierarchical supervisor-agent intervention, and LLM-agent-based replanning compare in time-to-recovery, performance-degradation area, false-recovery rate, and safety-violation count?</p>
+<p>Under a standardized industrial fault-injection suite covering sensor noise, actuator degradation, agent dropout, communication loss, and Byzantine/adversarial agents, how do reactive rule-based reconfiguration, fault-tolerant-trained MARL, hierarchical supervisor-agent intervention, and LLM-agent-based replanning compare in performance-degradation area, safety-violation excess, time spent healthy, relapses, and detection quality (false-recovery rate and recall)?</p>
 <h2 id="fault-suite">Fault-injection suite</h2>
-<table><tr><th>Fault</th><th>Injection semantics</th></tr><tr><td><a href="fault-sensor-noise.html">Sensor noise</a></td><td>Corrupts local observation vectors via additive noise, scale bias, or zeroed sensory inputs.</td></tr><tr><td><a href="fault-actuator-degradation.html">Actuator degradation</a></td><td>Attenuates physical action execution, capping motor output or introducing mechanical delays.</td></tr><tr><td><a href="fault-agent-dropout.html">Agent dropout</a></td><td>Completely zeros out an agent's participation, simulating node hardware crash or power loss.</td></tr><tr><td><a href="fault-communication-loss.html">Communication loss</a></td><td>Drops inter-agent messages and state synchronization signals, forcing uncoordinated local execution.</td></tr><tr><td><a href="fault-byzantine-adversarial.html">Byzantine / adversarial agents</a></td><td>Swaps cooperative policy for an adversarial policy taking counter-productive or malicious actions.</td></tr></table>
+<table><tr><th>Fault</th><th>Injection semantics</th></tr><tr><td><a href="fault-sensor-noise.html">Sensor noise</a></td><td>Corrupts local observation vectors with additive Gaussian noise.</td></tr><tr><td><a href="fault-actuator-degradation.html">Actuator degradation</a></td><td>Corrupts the execution of action commands: a stuck actuator, a restricted range of options, or intermittent slipping.</td></tr><tr><td><a href="fault-agent-dropout.html">Agent dropout</a></td><td>Removes an agent entirely and applies a fixed failsafe action in its place, simulating a node hardware crash or power loss.</td></tr><tr><td><a href="fault-communication-loss.html">Communication loss</a></td><td>Cuts the press agent's view of the sorting stage, freezing it at a stale value or blanking it out.</td></tr><tr><td><a href="fault-byzantine-adversarial.html">Byzantine / adversarial agents</a></td><td>Swaps cooperative policy for an adversarial policy taking counter-productive or malicious actions.</td></tr></table>
 <h2 id="recovery">Recovery mechanisms</h2>
 <table><tr><th>Mechanism</th><th>Paradigm</th></tr><tr><td><a href="recovery-mechanisms.html#rule-based-reconfiguration">Rule-based reconfiguration</a></td><td>Fixed or detected heuristics for restoring operation.</td></tr><tr><td><a href="recovery-mechanisms.html#fault-tolerant-trained-marl">Fault-tolerant-trained MARL</a></td><td>Policies trained or fine-tuned with faults injected during training.</td></tr><tr><td><a href="recovery-mechanisms.html#hierarchical-supervisor-agent">Hierarchical supervisor-agent</a></td><td>An additional agent monitors others and intervenes when recovery is required.</td></tr><tr><td><a href="recovery-mechanisms.html#llm-agent-replanning">LLM-agent replanning</a></td><td>An LLM reads structured system state and produces a recovery plan through environment control tools.</td></tr></table>
 <h2 id="metrics">Evaluation metrics</h2>
-<p>The planned scorecard records time-to-recovery, degradation-area, false-recovery rate, and safety-violation count. Multiple random seeds are required for defensible empirical comparison.</p>
+<p>The scorecard records degradation-area, safety-violation excess, fraction of time healthy, relapse count, false-recovery rate, and intervention recall. Every combination is run over 8 random seeds and reported with 95% confidence intervals.</p>
 <h2 id="baseline">Normal state baseline</h2>
 <p>System trajectory under standard operation without any injected faults or active recovery mechanisms.</p>
 <figure class="graph-container">
-  <img src="assets/normal-state-baseline.png" alt="Normal state baseline trajectory graph" class="graph-image">
+  <img src="assets/normal-state-baseline.svg" alt="Normal state baseline trajectory graph" class="graph-image">
   <figcaption>Normal state baseline - System operation with zero fault injections and no recovery mechanisms implemented. Displays material proportions, sorting purity, fill levels, and cumulative rewards.</figcaption>
 </figure>
 <h2 id="results">Results archive</h2>
 <p>The results area is structured around one page per fault, fault duration mode, and recovery mechanism. This allows graphs that do not fit into the paper to remain available as a complete experimental record.</p>
   <footer class="footer">
     <p>This site documents the experimental work associated with the FaultBench-Industrial research project.</p>
-    <p>Last updated: August 2026</p>
+    <p>Last updated: October 2026</p>
   </footer>
 </main>
 </div>

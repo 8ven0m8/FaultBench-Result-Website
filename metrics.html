@@ -160,14 +160,17 @@
   </div>
   <div class="article-kicker">Research</div><h1>Evaluation metrics</h1><p class="lede">The common scoreboard used across fault and recovery combinations.</p>
 <table><tr><th>Metric</th><th>Definition</th></tr>
-<tr><td>Time-to-recovery</td><td>Steps or seconds from fault onset to performance restoration.</td></tr>
-<tr><td>Degradation-area</td><td>Integral of performance loss during the recovery window.</td></tr>
-<tr><td>False-recovery rate</td><td>Frequency with which recovery is triggered when no real fault occurred.</td></tr>
-<tr><td>Safety-violation count</td><td>Number of hard constraint breaches during recovery.</td></tr></table>
-<h2>Experimental reporting</h2><p>Results should use multiple random seeds and report uncertainty rather than relying on a single run.</p>
+<tr><td>Degradation-area</td><td>Reward lost below the pre-fault baseline, summed from fault onset to the end of the episode, minus the same quantity for a matched fault-free control episode (floored at zero).</td></tr>
+<tr><td>Safety-violation excess</td><td>Weighted count of container overflow states (5 &times; catastrophic + 2 &times; severe + 1 &times; near-miss) from fault onset to the end of the episode, minus the same count for the matched fault-free control episode (floored at zero).</td></tr>
+<tr><td>Fraction of time healthy</td><td>Share of steps from fault onset to the end of the episode on which reward is within tolerance of the pre-fault baseline.</td></tr>
+<tr><td>Relapse count</td><td>Number of times performance falls back below the healthy threshold after a confirmed recovery (15 consecutive healthy steps).</td></tr>
+<tr><td>False-recovery rate</td><td>Share of a mechanism's interventions made on steps where no fault was affecting either channel. Only defined for mechanisms with a detector.</td></tr>
+<tr><td>Intervention recall</td><td>Share of steps with a fault actually affecting a channel on which the mechanism intervened. Only defined for mechanisms with a detector.</td></tr>
+</table>
+<h2>Experimental reporting</h2><p>Every combination is run over 8 random seeds (and over 3 training seeds for the two trained mechanisms). Results are reported as means with 95% confidence intervals, plus Glass's &Delta; effect sizes against the no-recovery control; see the <a href="results.html">Results</a> page.</p>
   <footer class="footer">
     <p>This site documents the experimental work associated with the FaultBench-Industrial research project.</p>
-    <p>Last updated: August 2026</p>
+    <p>Last updated: October 2026</p>
   </footer>
 </main>
 </div>
